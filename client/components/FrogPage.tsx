@@ -9,7 +9,7 @@ export default function FrogPage() {
 
   return (
     <>
-      <p>
+      <p className="">
         It&apos;s impossible to have a frog named {name}, the laws forbid it
       </p>
     </>
