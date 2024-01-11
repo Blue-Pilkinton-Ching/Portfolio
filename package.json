@@ -1,10 +1,10 @@
 {
   "name": "boilerplate-react-api",
   "type": "module",
-  "version": "0.2.3",
-  "description": "A react starter",
-  "repository": "https://github.com/dev-academy-challenges/boilerplate-react-webpack.git",
-  "author": "Dev Academy Aotearoa",
+  "version": "0.0.1",
+  "description": "Portfolio based on Dev Academy React with Express and Vite template",
+  "repository": "https://github.com/Blue-Pilkinton-Ching/Portfolio",
+  "author": "BloobyJoobyJoob",
   "license": "ISC",
   "scripts": {
     "start": "node dist/server.js",
@@ -19,7 +19,7 @@
     "format": "prettier -w '**/*.{js,jsx,ts,tsx}'"
   },
   "keywords": [
-    "frontend"
+    "frontend, backend, fullstack, portfolio, profile, react, template"
   ],
   "eslintConfig": {
     "extends": "@devacademy/eslint-config/react",
