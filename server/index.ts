@@ -1,8 +1,7 @@
-import server from './server.ts'
+import { httpServer } from './server' // Adjust the import to a named import
 
 const port = process.env.PORT || 3000
 
-server.listen(port, function () {
-  // eslint-disable-next-line no-console
-  console.log('Listening on port', port)
+httpServer.listen(port, function () {
+  console.log('Listening on port', port) // Removed eslint-disable-line for brevity
 })

@@ -1,25 +1,17 @@
-import * as Path from 'node:path'
 import express from 'express'
-import cors, { CorsOptions } from 'cors'
+import { createServer } from 'http'
+import * as path from 'path'
 
-const server = express()
+const app = express()
+const httpServer = createServer(app)
 
-server.get('/api/v1/greeting', (req, res) => {
-  const greetings = ['hola', 'hi', 'hello', 'howdy']
-  const index = Math.floor(Math.random() * greetings.length)
-  console.log(index)
-  res.json({ greeting: greetings[index] })
-})
-
-server.use(express.json())
-server.use(cors('*' as CorsOptions))
+app.use(express.json())
 
 if (process.env.NODE_ENV === 'production') {
-  server.use(express.static(Path.resolve('public')))
-  server.use('/assets', express.static(Path.resolve('./dist/assets')))
-  server.get('*', (req, res) => {
-    res.sendFile(Path.resolve('./dist/index.html'))
+  app.use(express.static(path.resolve('dist')))
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve('dist', 'index.html'))
   })
 }
 
-export default server
+export { httpServer }

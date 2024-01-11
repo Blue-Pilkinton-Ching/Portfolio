@@ -5,6 +5,6 @@ import routes from './routes.tsx'
 const router = createBrowserRouter(routes)
 document.addEventListener('DOMContentLoaded', () => {
   createRoot(document.getElementById('app') as HTMLElement).render(
-    <RouterProvider router={router} />
+    <RouterProvider router={router} />,
   )
 })

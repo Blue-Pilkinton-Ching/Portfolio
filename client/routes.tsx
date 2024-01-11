@@ -7,5 +7,5 @@ export default createRoutesFromElements(
   <Route path="/" element={<Layout />}>
     <Route index element={<HomePage />} />
     <Route path="/frogs/:name" element={<FrogPage />} />
-  </Route>
+  </Route>,
 )
