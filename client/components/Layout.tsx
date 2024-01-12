@@ -53,17 +53,22 @@ export default function Layout() {
         )}
       </header>
       <main className="">
-        <div
-          className={`h-dvh w-dvw bg-green-500 duration-1000 ${
-            showMenuPanel ? "block" : "hidden"
-          }`}
-        ></div>
-        <body
-          className="min-h-screen bg-neutral-800 px-10 py-24 md:px-20
-        lg:px-32"
-        >
-          <Outlet />
-        </body>
+        {showMenuPanel ? (
+          <body>
+            <div
+              className={`h-dvh w-dvw bg-green-500 duration-1000 ${
+                showMenuPanel ? "block" : "hidden"
+              }`}
+            ></div>
+          </body>
+        ) : (
+          <body
+            className="min-h-screen bg-neutral-800 px-10 py-24 md:px-20
+          lg:px-32"
+          >
+            <Outlet />
+          </body>
+        )}
       </main>
       {/* <footer className=" bg-neutral-900">Copyright &copy; 2038</footer> */}
     </>
