@@ -1,17 +1,32 @@
 import { useWindowSize } from "@uidotdev/usehooks";
 import { Link, Outlet } from "react-router-dom";
+import { MouseEvent, useState } from "react";
 
 export default function Layout() {
   const { width } = useWindowSize();
+  const [showMenuPanel, setShowMenuPanel] = useState(false);
+
+  function onMenuButton(event: MouseEvent<HTMLElement>) {
+    event.currentTarget.classList.toggle("change");
+    setShowMenuPanel((oldState) => !oldState);
+  }
+
+  if (width != null && width > 1023 && showMenuPanel) {
+    setShowMenuPanel(false);
+  }
 
   return (
     <>
       <header
-        className="bg backdrop-brightness-70 width 1023 fixed flex w-screen bg-neutral-800/50 px-10 py-8
-        backdrop-blur-sm lg:px-32"
+        className={`bg ${
+          showMenuPanel ? "bg-neutral-800/0" : "bg-neutral-800/50"
+        } backdrop-brightness-70 width 1023 fixed flex w-screen justify-between  px-10
+        py-8 backdrop-blur-sm lg:px-32`}
       >
         <a
-          className="font-display text-4xl font-light text-white"
+          className={`font-display text-4xl font-light text-white ${
+            showMenuPanel ? "opacity-0" : "opacity-100"
+          }`}
           href="/#home"
         >
           Blue PC
@@ -30,14 +45,23 @@ export default function Layout() {
             </Link>
           </nav>
         ) : (
-          ""
+          <button className="container" onClick={onMenuButton}>
+            <div className="bar1"></div>
+            <div className="bar2"></div>
+            <div className="bar3"></div>
+          </button>
         )}
       </header>
-      <main
-        className="min-h-screen bg-neutral-800 px-10 py-24 md:px-20
+      <main className="">
+        <div
+          className={`h-dvh w-dvw bg-green-500 duration-1000 ${
+            showMenuPanel ? "block" : "hidden"
+          }`}
+        ></div>
+        <body
+          className="min-h-screen bg-neutral-800 px-10 py-24 md:px-20
         lg:px-32"
-      >
-        <body>
+        >
           <Outlet />
         </body>
       </main>
