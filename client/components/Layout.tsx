@@ -23,7 +23,7 @@ export default function Layout() {
           </Link>
         </nav>
       </header>
-      <main className="min-h-screen bg-stone-800 px-24 py-24">
+      <main className="min-h-screen bg-neutral-800 px-24 py-24">
         <body>
           <Outlet />
         </body>
