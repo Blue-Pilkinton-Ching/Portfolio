@@ -52,22 +52,20 @@ export default function Layout() {
           </button>
         )}
       </header>
-      <main className="">
+      <main>
         {showMenuPanel ? (
-          <body>
-            <div
-              className={`h-dvh w-dvw bg-green-500 duration-1000 ${
-                showMenuPanel ? "block" : "hidden"
-              }`}
-            ></div>
-          </body>
+          <div
+            className={`h-dvh w-dvw bg-green-500 duration-300 ${
+              showMenuPanel ? "block" : "hidden"
+            }`}
+          ></div>
         ) : (
-          <body
-            className="min-h-screen bg-neutral-800 px-10 py-24 md:px-20
+          <div
+            className="min-h-screen bg-neutral-800 px-10 md:px-20
           lg:px-32"
           >
             <Outlet />
-          </body>
+          </div>
         )}
       </main>
       {/* <footer className=" bg-neutral-900">Copyright &copy; 2038</footer> */}
