@@ -63,7 +63,7 @@ export default function Layout() {
           </div>
         ) : (
           <div
-            className="min-h-screen bg-neutral-800 px-10 md:px-20
+            className=" bg-neutral-800 px-10 md:px-20
           lg:px-32"
           >
             <Outlet />
