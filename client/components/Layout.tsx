@@ -1,14 +1,21 @@
 import { useWindowSize } from "@uidotdev/usehooks";
-import { Link, Outlet } from "react-router-dom";
-import { MouseEvent, useState } from "react";
+import { Outlet } from "react-router-dom";
+import { useRef, useState } from "react";
+import { NavBar } from "./NavBar";
 
 export default function Layout() {
   const { width } = useWindowSize();
   const [showMenuPanel, setShowMenuPanel] = useState(false);
+  const menuButton = useRef<HTMLButtonElement>(null);
 
-  function onMenuButton(event: MouseEvent<HTMLElement>) {
-    event.currentTarget.classList.toggle("change");
+  function onMenuButton() {
+    menuButton.current?.classList.toggle("change");
     setShowMenuPanel((oldState) => !oldState);
+  }
+
+  function onNavBarItemClicked() {
+    setShowMenuPanel(false);
+    menuButton.current?.classList.toggle("change");
   }
 
   if (width != null && width > 1023 && showMenuPanel) {
@@ -24,28 +31,21 @@ export default function Layout() {
         py-8 backdrop-blur-sm lg:px-32`}
       >
         <a
-          className={`font-display text-4xl font-light text-white ${
-            showMenuPanel ? "opacity-0" : "opacity-100"
+          className={`font-display text-4xl font-light text-white  ${
+            showMenuPanel ? "invisible" : "visible"
           }`}
           href="/#home"
         >
           Blue PC
         </a>
         {width != null && width > 1023 ? (
-          <nav className="flex flex-auto justify-end *:my-auto *:px-4 *:py-0.5 *:font-display *:text-lg *:font-medium *:text-white *:duration-300 hover:*:brightness-50">
-            <Link to="/#home">HOME</Link>
-            <Link to="/#about">ABOUT ME</Link>
-            <Link to="/#projects">PROJECTS</Link>
-            <Link to="/#contact">CONTACT</Link>
-            <Link
-              to="/#resume"
-              className="w-32 text-center last:rounded-full last:bg-green-500"
-            >
-              RESUME
-            </Link>
-          </nav>
+          <NavBar
+            onItemClick={onNavBarItemClicked}
+            classes="flex flex-auto justify-end *:my-auto *:px-4 *:py-0.5 *:font-display *:text-lg *:font-medium *:text-white *:duration-300 hover:*:brightness-50"
+            lastItemClasses="p w-32 rounded-full bg-green-500 text-center"
+          />
         ) : (
-          <button className="container" onClick={onMenuButton}>
+          <button className="container" onClick={onMenuButton} ref={menuButton}>
             <div className="bar1"></div>
             <div className="bar2"></div>
             <div className="bar3"></div>
@@ -54,11 +54,13 @@ export default function Layout() {
       </header>
       <main>
         {showMenuPanel ? (
-          <div
-            className={`h-dvh w-dvw bg-green-500 duration-300 ${
-              showMenuPanel ? "block" : "hidden"
-            }`}
-          ></div>
+          <div className={`h-svh w-screen bg-green-500 duration-300`}>
+            <NavBar
+              onItemClick={onNavBarItemClicked}
+              classes=" h-full flex justify-center items-center flex-col *:px-2 *:py-0.5 *:font-display *:text-lg *:font-medium *:text-white *:duration-300 hover:*:brightness-50"
+              lastItemClasses="p w-32 rounded-full bg-neutral-800 text-center"
+            />
+          </div>
         ) : (
           <div
             className="min-h-screen bg-neutral-800 px-10 md:px-20

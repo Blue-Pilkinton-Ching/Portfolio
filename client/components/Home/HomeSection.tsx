@@ -5,7 +5,7 @@ export function HomeSection() {
   const { width } = useWindowSize();
 
   return (
-    <section id="home" className="flex h-dvh w-full flex-col pt-8">
+    <section id="home" className="flex h-svh w-full flex-col pt-8">
       <div className="my-auto flex justify-between">
         <div className="my-auto h-fit">
           <h1
