@@ -1,13 +1,12 @@
 import { useWindowSize } from "@uidotdev/usehooks";
 import { Link } from "react-router-dom";
-import { useInView, animate, stagger, useScroll } from "framer-motion";
+import { useInView, animate, stagger } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 export function HomeSection() {
   const { width } = useWindowSize();
   const title = useRef(null);
   const titleInView = useInView(title);
-  const { scrollYProgress } = useScroll();
 
   useEffect(() => {
     if (titleInView) {
@@ -19,16 +18,16 @@ export function HomeSection() {
       animate(
         ".title-image-animate",
         { opacity: 1, x: 0 },
-        { duration: 0.75, delay: 0.5, ease: "circOut" },
+        { duration: 0.7, delay: 0.4, ease: "circOut" },
       );
     } else {
       animate(".title-animate", { opacity: 0, y: 75 }, { duration: 0 });
-      animate(".title-image-animate", { opacity: 0, x: 75 }, { duration: 0 });
+      if (width) {
+        animate(".title-image-animate", { opacity: 0, x: 75 }, { duration: 0 });
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [titleInView]);
-
-  //   useEffect(() => {}, [scrollYProgress]);
+  }, [titleInView, width]);
 
   return (
     <section id="home" className="flex h-svh w-full flex-col pt-8">
@@ -69,11 +68,11 @@ export function HomeSection() {
           </div>
         </div>
         {width != null && width > 767 ? (
-          <div className="ml-4 w-[30vw] max-w-[500px]">
+          <div className="title-image-animate ml-4 w-[30vw] max-w-[500px]">
             <img
               src="images/headshot.png"
               alt="headshot of Blue PC"
-              className="title-image-animate aspect-square rounded-xl object-cover shadow-xl"
+              className="aspect-square rounded-xl object-cover shadow-xl"
             />
           </div>
         ) : (
