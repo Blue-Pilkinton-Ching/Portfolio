@@ -156,19 +156,19 @@ export function AboutSection() {
               </h4>
               <br />
               <div className="text-md font-display font-semibold text-white sm:text-xl">
-                <ul className="about-skills-text-animate list-disc overflow-hidden text-left">
+                <ul className="about-skills-text-animate list-disc text-left">
                   <li>Authentication</li>
                   <li>REST API calls</li>
                   <li>Databases</li>
                 </ul>
                 <br />
-                <ul className="about-skills-text-animate list-disc overflow-hidden text-left">
+                <ul className="about-skills-text-animate list-disc text-left">
                   <li>3d & 2d games</li>
                   <li>Multithreaded Code</li>
                   <li>Compute Shaders</li>
                   <li>Multiplayer Networking (Unity NGO)</li>
                 </ul>
-                <ul className="about-skills-text-animate list-disc overflow-hidden text-left">
+                <ul className="about-skills-text-animate list-disc text-left">
                   <li>Multiplayer Matchmaking (Unity Lobby)</li>
                   <li>Online voice chat (Vivox)</li>
                   <li>Unity VFX & Shader Graph</li>
