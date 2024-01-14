@@ -1,12 +1,16 @@
 import { useWindowSize } from "@uidotdev/usehooks";
 import { Outlet } from "react-router-dom";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NavBar } from "./NavBar";
+import { useLocation } from "react-router-dom";
+
+const headerOffset = 40;
 
 export default function Layout() {
   const { width } = useWindowSize();
   const [showMenuPanel, setShowMenuPanel] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
+  const location = useLocation();
 
   function onMenuButton() {
     menuButton.current?.classList.toggle("change");
@@ -21,6 +25,22 @@ export default function Layout() {
   if (width != null && width > 1023 && showMenuPanel) {
     setShowMenuPanel(false);
   }
+
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        const elementPosition = element.getBoundingClientRect().top; // get the position relative to the viewport
+
+        const offsetPosition = elementPosition + window.scrollY - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    }
+  }, [location]);
 
   return (
     <>

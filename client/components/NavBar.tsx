@@ -20,13 +20,14 @@ export function NavBar(props: NavBarProps) {
       <Link onClick={onItemClick} to="/#contact">
         CONTACT
       </Link>
-      <Link
+      <a
         onClick={onItemClick}
-        to="/#resume"
+        href="./cv.pdf"
+        download="CV - Blue Pilkinton-Ching"
         className={props.lastItemClasses}
       >
         RESUME
-      </Link>
+      </a>
     </nav>
   );
 }
