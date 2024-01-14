@@ -8,7 +8,11 @@ export function AboutSection() {
   const { width } = useWindowSize();
   const [shouldScroll, setShouldScroll] = useState(false);
   const about = useRef(null);
+  const skills = useRef(null);
+  const github = useRef(null);
   const aboutInView = useInView(about);
+  const skillsInView = useInView(skills);
+  const githubInView = useInView(github);
 
   useEffect(() => {
     if (shouldScroll) {
@@ -31,17 +35,7 @@ export function AboutSection() {
   }, [width]);
 
   useEffect(() => {
-    if (aboutInView) {
-      animate(
-        ".about-animate",
-        { opacity: 1, y: 0 },
-        { duration: 0.5, delay: stagger(0.1), ease: "circOut" },
-      );
-      animate(
-        ".about-me-animate",
-        { opacity: 1, x: 0 },
-        { duration: 0.5, delay: 0.3, ease: "circOut" },
-      );
+    if (skillsInView) {
       animate(
         ".about-skills-animate",
         { opacity: 1, x: 0 },
@@ -57,15 +51,6 @@ export function AboutSection() {
         },
       );
       animate(
-        ".about-github-animate",
-        { opacity: 1, y: 0 },
-        {
-          duration: 0.5,
-          delay: 0.5,
-          ease: "circOut",
-        },
-      );
-      animate(
         ".about-skills-icons-animate",
         { opacity: 1, y: 0 },
         {
@@ -75,15 +60,12 @@ export function AboutSection() {
         },
       );
     } else {
-      animate(".about-animate", { opacity: 0, y: 75 }, { duration: 0 });
-      animate(".about-me-animate", { opacity: 0, x: -75 }, { duration: 0 });
       animate(".about-skills-animate", { opacity: 0, x: 75 }, { duration: 0 });
       animate(
         ".about-skills-text-animate",
         { opacity: 0, x: 75 },
         { duration: 0 },
       );
-      animate(".about-github-animate", { opacity: 0, y: 75 }, { duration: 0 });
       if (width) {
         animate(
           ".about-skills-icons-animate",
@@ -91,6 +73,39 @@ export function AboutSection() {
           { duration: 0 },
         );
       }
+    }
+  }, [width, skillsInView]);
+
+  useEffect(() => {
+    if (githubInView) {
+      animate(
+        ".about-github-animate",
+        { opacity: 1, y: 0 },
+        {
+          duration: 0.5,
+          ease: "circOut",
+        },
+      );
+    } else {
+      animate(".about-github-animate", { opacity: 0, y: 75 }, { duration: 0 });
+    }
+  }, [width, githubInView]);
+
+  useEffect(() => {
+    if (aboutInView) {
+      animate(
+        ".about-animate",
+        { opacity: 1, y: 0 },
+        { duration: 0.5, delay: stagger(0.1), ease: "circOut" },
+      );
+      animate(
+        ".about-me-animate",
+        { opacity: 1, x: 0 },
+        { duration: 0.5, delay: 0.3, ease: "circOut" },
+      );
+    } else {
+      animate(".about-animate", { opacity: 0, y: 75 }, { duration: 0 });
+      animate(".about-me-animate", { opacity: 0, x: -75 }, { duration: 0 });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [aboutInView, width]);
@@ -134,7 +149,7 @@ export function AboutSection() {
               </p>
             </div>
           </div>
-          <div className="flex lg:w-fit lg:flex-col">
+          <div ref={skills} className="flex lg:w-fit lg:flex-col">
             <div className="h-min whitespace-nowrap">
               <h4 className="about-skills-animate font-display text-3xl font-bold text-green-500 sm:text-4xl">
                 Skills
@@ -170,9 +185,9 @@ export function AboutSection() {
             )}
           </div>
         </div>
-        <div className="w-full">
+        <div className="w-full" ref={github}>
           {width && (width > 1399 || width < 641) ? (
-            <div className=" about-skills-icons-animate">
+            <div className="about-skills-icons-animate">
               <TechIcons classes="flex flex-wrap justify-center mt-[6vh]" />
             </div>
           ) : (
