@@ -8,3 +8,7 @@ export interface TechIconProps {
   iconName: string;
   iconTitle?: string;
 }
+
+export interface TechIconsProps {
+  classes: string;
+}
