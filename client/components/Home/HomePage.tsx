@@ -7,6 +7,7 @@ function HomePage() {
       <HomeSection />
       <br />
       <AboutSection />
+      <br />
     </>
   );
 }

@@ -74,10 +74,10 @@ export default function Layout() {
       </header>
       <main>
         {showMenuPanel ? (
-          <div className={`h-svh w-screen bg-green-500 duration-300`}>
+          <div className={`h-dvh w-screen bg-green-500 duration-300`}>
             <NavBar
               onItemClick={onNavBarItemClicked}
-              classes=" h-full flex justify-center items-center flex-col *:px-2 *:py-0.5 *:font-display *:text-lg *:font-medium *:text-white *:duration-300 hover:*:brightness-50"
+              classes="h-full flex justify-center items-center flex-col *:px-2 *:py-0.5 *:font-display *:text-lg *:font-medium *:text-white *:duration-300 hover:*:brightness-50"
               lastItemClasses="p w-32 rounded-full bg-neutral-800 text-center"
             />
           </div>
