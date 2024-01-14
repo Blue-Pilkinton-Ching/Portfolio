@@ -32,7 +32,7 @@ export function HomeSection() {
   }, [titleInView, width]);
 
   return (
-    <section id="home" className="flex h-svh w-full flex-col pt-8">
+    <section id="home" className=" flex h-svh w-full flex-col pt-8">
       <div className="my-auto flex justify-between" ref={title}>
         <div className="my-auto h-fit">
           <h1
@@ -44,14 +44,14 @@ export function HomeSection() {
             <br />
             Pilkinton-Ching
           </h1>
-          <h2 className="title-animate my-4 font-display text-2xl font-bold text-green-500">
+          <h2 className="title-animate my-4 font-display text-2xl font-bold text-green-600">
             Fullstack & Interactive Developer
           </h2>
           {/* <h3 className="font-display text-lg text-white">Portfolio</h3> */}
           <div className="title-animate">
             <Link
               to={`/#contact`}
-              className=" mt-3 inline-block rounded-3xl bg-green-500 px-6 py-3.5 font-display text-lg font-semibold text-white duration-300 hover:brightness-50"
+              className=" mt-3 inline-block rounded-3xl bg-green-600 px-6 py-3.5 font-display text-lg font-semibold text-white duration-300 hover:brightness-50"
             >
               Get in Touch!
             </Link>

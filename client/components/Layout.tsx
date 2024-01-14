@@ -62,7 +62,7 @@ export default function Layout() {
           <NavBar
             onItemClick={onNavBarItemClicked}
             classes="flex flex-auto justify-end *:my-auto *:px-4 *:py-0.5 *:font-display *:text-lg *:font-medium *:text-white *:duration-300 hover:*:brightness-50"
-            lastItemClasses="p w-32 rounded-full bg-green-500 text-center"
+            lastItemClasses="p w-32 rounded-full bg-green-600 text-center"
           />
         ) : (
           <button className="container" onClick={onMenuButton} ref={menuButton}>
@@ -74,7 +74,7 @@ export default function Layout() {
       </header>
       <main>
         {showMenuPanel ? (
-          <div className={`h-dvh w-screen bg-green-500 duration-300`}>
+          <div className={`h-dvh w-screen bg-green-600 duration-300`}>
             <NavBar
               onItemClick={onNavBarItemClicked}
               classes="h-full flex justify-center items-center flex-col *:px-2 *:py-0.5 *:font-display *:text-lg *:font-medium *:text-white *:duration-300 hover:*:brightness-50"
@@ -83,8 +83,8 @@ export default function Layout() {
           </div>
         ) : (
           <div
-            className=" bg-neutral-800 px-10 md:px-20
-          lg:px-32"
+            className="bg-neutral-800 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] px-10
+          md:px-20 lg:px-32"
           >
             <Outlet />
           </div>

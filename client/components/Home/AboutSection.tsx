@@ -55,7 +55,7 @@ export function AboutSection() {
         { opacity: 1, y: 0 },
         {
           duration: 0.5,
-          delay: 0.3,
+          delay: 0.5,
           ease: "circOut",
         },
       );
@@ -83,6 +83,7 @@ export function AboutSection() {
         { opacity: 1, y: 0 },
         {
           duration: 0.5,
+          delay: 0.6,
           ease: "circOut",
         },
       );
@@ -118,7 +119,7 @@ export function AboutSection() {
           className="flex w-full flex-col gap-12 sm:gap-16 lg:flex-row lg:gap-20"
         >
           <div className="">
-            <h4 className="about-me-animate font-display text-3xl font-bold text-green-500 sm:text-4xl">
+            <h4 className="about-me-animate font-display text-3xl font-bold text-green-600 sm:text-4xl">
               About Me
             </h4>
             <br />
@@ -151,7 +152,7 @@ export function AboutSection() {
           </div>
           <div ref={skills} className="flex lg:w-fit lg:flex-col">
             <div className="h-min whitespace-nowrap">
-              <h4 className="about-skills-animate font-display text-3xl font-bold text-green-500 sm:text-4xl">
+              <h4 className="about-skills-animate font-display text-3xl font-bold text-green-600 sm:text-4xl">
                 Skills
               </h4>
               <br />
