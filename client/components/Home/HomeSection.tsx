@@ -1,32 +1,62 @@
 import { useWindowSize } from "@uidotdev/usehooks";
 import { Link } from "react-router-dom";
+import { useInView, animate, stagger, useScroll } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export function HomeSection() {
   const { width } = useWindowSize();
+  const title = useRef(null);
+  const titleInView = useInView(title);
+  const { scrollYProgress } = useScroll();
+
+  useEffect(() => {
+    if (titleInView) {
+      animate(
+        ".title-animate",
+        { opacity: 1, y: 0 },
+        { duration: 1, delay: stagger(0.1), ease: "circOut" },
+      );
+      animate(
+        ".title-image-animate",
+        { opacity: 1, x: 0 },
+        { duration: 0.75, delay: 0.5, ease: "circOut" },
+      );
+    } else {
+      animate(".title-animate", { opacity: 0, y: 75 }, { duration: 0 });
+      animate(".title-image-animate", { opacity: 0, x: 75 }, { duration: 0 });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [titleInView]);
+
+  //   useEffect(() => {}, [scrollYProgress]);
 
   return (
     <section id="home" className="flex h-svh w-full flex-col pt-8">
-      <div className="my-auto flex justify-between">
+      <div className="my-auto flex justify-between" ref={title}>
         <div className="my-auto h-fit">
           <h1
-            className="font-display text-5xl font-bold
+            className="title-animate font-display text-5xl font-bold
               text-white xl:text-7xl"
+            data-aos="fade-up"
           >
             Blue
             <br />
             Pilkinton-Ching
           </h1>
-          <h2 className="my-4 font-display text-2xl font-bold text-green-500">
+          <h2 className="title-animate my-4 font-display text-2xl font-bold text-green-500">
             Fullstack & Interactive Developer
           </h2>
           {/* <h3 className="font-display text-lg text-white">Portfolio</h3> */}
-          <Link
-            to={`/#contact`}
-            className="mt-3 inline-block rounded-3xl bg-green-500 px-6 py-3.5 font-display text-lg font-semibold text-white duration-300 hover:brightness-50"
-          >
-            Get in Touch!
-          </Link>
-          <div className="mt-5 flex gap-2 *:w-9">
+          <div className="title-animate">
+            <Link
+              to={`/#contact`}
+              className=" mt-3 inline-block rounded-3xl bg-green-500 px-6 py-3.5 font-display text-lg font-semibold text-white duration-300 hover:brightness-50"
+            >
+              Get in Touch!
+            </Link>
+          </div>
+
+          <div className="title-animate mt-5 flex gap-2 *:w-9">
             <a href="https://linkedin.com/in/blue-pilkinton-ching">
               <img src="images/linkedin.svg" alt="link to linkedin" />
             </a>
@@ -38,13 +68,12 @@ export function HomeSection() {
             </a>
           </div>
         </div>
-
         {width != null && width > 767 ? (
           <div className="ml-4 w-[30vw] max-w-[500px]">
             <img
               src="images/headshot.png"
               alt="headshot of Blue PC"
-              className="aspect-square rounded-xl object-cover shadow-xl"
+              className="title-image-animate aspect-square rounded-xl object-cover shadow-xl"
             />
           </div>
         ) : (

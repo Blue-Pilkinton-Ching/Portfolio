@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { TechIcon } from "./TechIcon";
 import GitHubCalendar from "react-github-calendar";
 import { useWindowSize } from "@uidotdev/usehooks";
 import { TechIcons } from "./TechIcons";
