@@ -13,16 +13,18 @@ export function HomeSection() {
       animate(
         ".title-animate",
         { opacity: 1, y: 0 },
-        { duration: 1, delay: stagger(0.1), ease: "circOut" },
+        { duration: 0.7, delay: stagger(0.1), ease: "circOut" },
       );
-      animate(
-        ".title-image-animate",
-        { opacity: 1, x: 0 },
-        { duration: 0.7, delay: 0.4, ease: "circOut" },
-      );
+      if (width && width > 767) {
+        animate(
+          ".title-image-animate",
+          { opacity: 1, x: 0 },
+          { duration: 0.5, delay: 0.3, ease: "circOut" },
+        );
+      }
     } else {
       animate(".title-animate", { opacity: 0, y: 75 }, { duration: 0 });
-      if (width) {
+      if (width && width > 767) {
         animate(".title-image-animate", { opacity: 0, x: 75 }, { duration: 0 });
       }
     }
@@ -72,7 +74,7 @@ export function HomeSection() {
             <img
               src="images/headshot.png"
               alt="headshot of Blue PC"
-              className="aspect-square rounded-xl object-cover shadow-xl"
+              className="aspect-square rounded-xl object-cover shadow-lg"
             />
           </div>
         ) : (

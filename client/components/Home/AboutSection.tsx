@@ -56,6 +56,24 @@ export function AboutSection() {
           ease: "circOut",
         },
       );
+      animate(
+        ".about-github-animate",
+        { opacity: 1, y: 0 },
+        {
+          duration: 0.5,
+          delay: 0.5,
+          ease: "circOut",
+        },
+      );
+      animate(
+        ".about-skills-icons-animate",
+        { opacity: 1, y: 0 },
+        {
+          duration: 0.5,
+          delay: 0.3,
+          ease: "circOut",
+        },
+      );
     } else {
       animate(".about-animate", { opacity: 0, y: 75 }, { duration: 0 });
       animate(".about-me-animate", { opacity: 0, x: -75 }, { duration: 0 });
@@ -65,6 +83,14 @@ export function AboutSection() {
         { opacity: 0, x: 75 },
         { duration: 0 },
       );
+      animate(".about-github-animate", { opacity: 0, y: 75 }, { duration: 0 });
+      if (width) {
+        animate(
+          ".about-skills-icons-animate",
+          { opacity: 0, y: 75 },
+          { duration: 0 },
+        );
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [aboutInView, width]);
@@ -72,8 +98,11 @@ export function AboutSection() {
   return (
     <section id="about" className="center flex min-h-dvh w-full flex-col">
       <div className="my-auto">
-        <div className="flex w-full flex-col gap-12 sm:gap-16 lg:flex-row lg:gap-20">
-          <div className="" ref={about}>
+        <div
+          ref={about}
+          className="flex w-full flex-col gap-12 sm:gap-16 lg:flex-row lg:gap-20"
+        >
+          <div className="">
             <h4 className="about-me-animate font-display text-3xl font-bold text-green-500 sm:text-4xl">
               About Me
             </h4>
@@ -133,7 +162,9 @@ export function AboutSection() {
               </div>
             </div>
             {width && width < 1400 && width > 640 ? (
-              <TechIcons classes="px-[5%] flex w-fit flex-wrap flex-grow content-center justify-center" />
+              <div className=" about-skills-icons-animate">
+                <TechIcons classes="px-[5%] min-h-48 flex w-fit flex-wrap flex-grow content-center justify-center" />
+              </div>
             ) : (
               ""
             )}
@@ -141,11 +172,13 @@ export function AboutSection() {
         </div>
         <div className="w-full">
           {width && (width > 1399 || width < 641) ? (
-            <TechIcons classes="flex flex-wrap justify-center mt-[6vh]" />
+            <div className=" about-skills-icons-animate">
+              <TechIcons classes="flex flex-wrap justify-center mt-[6vh]" />
+            </div>
           ) : (
             ""
           )}
-          <div className="mx-auto mt-[6vh] max-w-fit overflow-hidden text-white">
+          <div className="about-github-animate mx-auto mt-[6vh] max-w-fit overflow-hidden text-white">
             <GitHubCalendar
               username="blue-pilkinton-ching"
               colorScheme="dark"

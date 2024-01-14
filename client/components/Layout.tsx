@@ -25,9 +25,9 @@ export default function Layout() {
   return (
     <>
       <header
-        className={`bg z-50 ${
+        className={`fixed z-50 ${
           showMenuPanel ? "bg-neutral-800/0" : "bg-neutral-800/50"
-        } backdrop-brightness-70 width 1023 fixed flex w-screen justify-between  px-10
+        } backdrop-brightness-70 width 1023  flex w-screen justify-between  px-10
         py-8 backdrop-blur-sm lg:px-32`}
       >
         <a
