@@ -18,7 +18,7 @@ export function ContactSection() {
   }, [contactInView]);
 
   return (
-    <section id="contact" className="mb-60 mt-40 flex w-full flex-col">
+    <section id="contact" className="mb-64 mt-48 flex w-full flex-col">
       <div className="my-auto h-full" ref={contact}>
         <h4 className="animate-contact text-center font-display text-3xl font-bold text-white sm:text-5xl">
           Contact Me
@@ -30,7 +30,7 @@ export function ContactSection() {
         <div className="mt-10 text-center">
           <div className=" flex flex-wrap justify-center gap-6 font-display text-white *:flex *:h-16 *:w-full *:max-w-[310px] *:rounded-2xl *:bg-green-600">
             <a
-              className="animate-contact"
+              className="animate-contact duration-300 hover:brightness-50"
               href="mailto:bluepilkintonching@gmail.com"
             >
               <img

@@ -82,48 +82,63 @@ export default function Layout() {
             />
           </div>
         ) : (
-          <div
-            className="bg-neutral-800 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] px-5 sm:px-10
-          md:px-20 lg:px-32"
-          >
-            <Outlet />
+          <div className="bg-neutral-800 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
+            <div
+              className="background-fade px-5
+          sm:px-10 md:px-20 lg:px-32"
+            >
+              <Outlet />
+            </div>
           </div>
         )}
       </main>
-      <footer className="flex h-28 items-center justify-evenly bg-neutral-900 px-[10vw] font-display text-white shadow-md sm:justify-between">
-        <a className="scroll-smooth text-2xl" href="/#home">
-          bluepc.me
-        </a>
-        <div className="mx-auto hidden text-lg sm:block">
-          <div className="flex items-center">
-            <p className="mr-5 hidden xl:block">This website was built with</p>
-            <div className="flex flex-row gap-2 *:w-9">
-              <img src="images/tech-icons/typescript.svg" alt="typescript" />
-              <img src="images/tech-icons/tailwindcss.svg" alt="tailwindcss" />
-              <img src="images/tech-icons/react.svg" alt="react" />
+      {showMenuPanel ? (
+        ""
+      ) : (
+        <footer className="flex h-28 items-center justify-evenly bg-neutral-900 px-[10vw] font-display text-white shadow-md sm:justify-between">
+          <a className="scroll-smooth text-2xl" href="/#home">
+            bluepc.me
+          </a>
+          <div className="mx-auto hidden text-lg sm:block">
+            <div className="flex items-center">
+              <p className="mr-5 hidden xl:block">
+                This website was built with
+              </p>
+              <div className="flex flex-row gap-2 *:w-9">
+                <img src="images/tech-icons/typescript.svg" alt="typescript" />
+                <img
+                  src="images/tech-icons/tailwindcss.svg"
+                  alt="tailwindcss"
+                />
+                <img src="images/tech-icons/react.svg" alt="react" />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="flex flex-row gap-2">
-          <a href="https://linkedin.com/in/blue-pilkinton-ching">
-            <img
-              className="w-9"
-              src="images/linkedin.svg"
-              alt="link to linkedin"
-            />
-          </a>
-          <a href="https://github.com/Blue-Pilkinton-Ching">
-            <img className="w-9" src="images/github.svg" alt="link to github" />
-          </a>
-          <a href="https://www.instagram.com/blues_profile/">
-            <img
-              className="w-9"
-              src="images/instagram.svg"
-              alt="link to instagram"
-            />
-          </a>
-        </div>
-      </footer>
+          <div className="flex flex-row gap-2">
+            <a href="https://linkedin.com/in/blue-pilkinton-ching">
+              <img
+                className="w-9"
+                src="images/linkedin.svg"
+                alt="link to linkedin"
+              />
+            </a>
+            <a href="https://github.com/Blue-Pilkinton-Ching">
+              <img
+                className="w-9"
+                src="images/github.svg"
+                alt="link to github"
+              />
+            </a>
+            <a href="https://www.instagram.com/blues_profile/">
+              <img
+                className="w-9"
+                src="images/instagram.svg"
+                alt="link to instagram"
+              />
+            </a>
+          </div>
+        </footer>
+      )}
     </>
   );
 }

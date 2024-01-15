@@ -19,3 +19,5 @@ export interface HomeProjectProps {
   page: string;
   technologies: string;
 }
+
+export interface props
