@@ -93,10 +93,13 @@ export default function Layout() {
       <footer className="flex h-28 items-center justify-evenly bg-neutral-900 px-[10vw] font-display text-white shadow-md sm:justify-between">
         <p className="text-2xl">bluepc.me</p>
         <div className="mx-auto hidden text-lg sm:block">
-          <div className="flex flex-row gap-2 *:w-9">
-            <img src="images/tech-icons/typescript.svg" alt="typescript" />
-            <img src="images/tech-icons/tailwindcss.svg" alt="tailwindcss" />
-            <img src="images/tech-icons/react.svg" alt="react" />
+          <div className="flex items-center">
+            <p className="mr-5 hidden xl:block">This website was built with</p>
+            <div className="flex flex-row gap-2 *:w-9">
+              <img src="images/tech-icons/typescript.svg" alt="typescript" />
+              <img src="images/tech-icons/tailwindcss.svg" alt="tailwindcss" />
+              <img src="images/tech-icons/react.svg" alt="react" />
+            </div>
           </div>
         </div>
         <div className="flex flex-row gap-2">
