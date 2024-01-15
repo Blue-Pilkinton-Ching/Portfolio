@@ -90,21 +90,32 @@ export default function Layout() {
           </div>
         )}
       </main>
-      <footer className="flex h-28 items-center justify-between bg-neutral-900 px-[10vw] font-display  text-white shadow-md">
+      <footer className="flex h-28 items-center justify-evenly bg-neutral-900 px-[10vw] font-display text-white shadow-md sm:justify-between">
         <p className="text-2xl">bluepc.me</p>
-        <div className="text-lg">
-          This website was made with <div></div>
+        <div className="mx-auto hidden text-lg sm:block">
+          <div className="flex flex-row gap-2 *:w-9">
+            <img src="images/tech-icons/typescript.svg" alt="typescript" />
+            <img src="images/tech-icons/tailwindcss.svg" alt="tailwindcss" />
+            <img src="images/tech-icons/react.svg" alt="react" />
+          </div>
         </div>
-
-        <div className="flex gap-2 *:w-9">
+        <div className="flex flex-row gap-2">
           <a href="https://linkedin.com/in/blue-pilkinton-ching">
-            <img src="images/linkedin.svg" alt="link to linkedin" />
+            <img
+              className="w-9"
+              src="images/linkedin.svg"
+              alt="link to linkedin"
+            />
           </a>
           <a href="https://github.com/Blue-Pilkinton-Ching">
-            <img src="images/github.svg" alt="link to github" />
+            <img className="w-9" src="images/github.svg" alt="link to github" />
           </a>
-          <a className="p-1" href="https://www.instagram.com/blues_profile/">
-            <img src="images/instagram.svg" alt="link to instagram" />
+          <a href="https://www.instagram.com/blues_profile/">
+            <img
+              className="w-9"
+              src="images/instagram.svg"
+              alt="link to instagram"
+            />
           </a>
         </div>
       </footer>
