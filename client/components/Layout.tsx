@@ -124,7 +124,7 @@ export default function Layout() {
             </a>
             <a href="https://www.instagram.com/blues_profile/">
               <img
-                className="w-9"
+                className="w-9 scale-90"
                 src="images/instagram.svg"
                 alt="link to instagram"
               />

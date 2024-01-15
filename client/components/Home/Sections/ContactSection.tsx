@@ -3,7 +3,9 @@ import { animate, stagger, useInView } from "framer-motion";
 
 export function ContactSection() {
   const contact = useRef(null);
+  const icons = useRef(null);
   const contactInView = useInView(contact);
+  const iconsInView = useInView(icons);
 
   useEffect(() => {
     if (contactInView) {
@@ -16,6 +18,22 @@ export function ContactSection() {
       animate(".animate-contact", { opacity: 0, y: 75 }, {});
     }
   }, [contactInView]);
+
+  useEffect(() => {
+    if (iconsInView) {
+      animate(
+        ".animate-contact-icons",
+        { opacity: 1, y: 0 },
+        {
+          duration: 0.3,
+          delay: stagger(0.1, { startDelay: 0.1 }),
+          ease: "circOut",
+        },
+      );
+    } else {
+      animate(".animate-contact-icons", { opacity: 0, y: 75 }, {});
+    }
+  }, [iconsInView]);
 
   return (
     <section
@@ -31,25 +49,56 @@ export function ContactSection() {
           Want to get in contact? Get touch with me using either options below!
         </p>
         <div className="mt-10 text-center">
-          <div className=" flex flex-wrap justify-center gap-6 font-display text-white *:flex *:h-16 *:w-full *:max-w-[310px] *:rounded-2xl *:bg-green-600">
-            <a
-              className="animate-contact duration-300 hover:brightness-50"
-              href="mailto:bluepilkintonching@gmail.com"
-            >
+          <div
+            ref={icons}
+            className="mx-auto  flex max-w-[800px] flex-wrap justify-center gap-6 font-display text-white *:flex *:h-16 *:w-full *:max-w-[310px] *:rounded-2xl *:bg-green-600"
+          >
+            <div className="animate-contact-icons">
+              <a
+                href="mailto:bluepilkintonching@gmail.com"
+                className="flex w-full rounded-2xl bg-green-600 duration-300 hover:brightness-50"
+              >
+                <img
+                  src="images/email.svg"
+                  alt="email"
+                  className="mx-3.5 py-3.5"
+                />
+                <p className="my-auto">bluepilkintonching@gmail.com</p>
+              </a>
+            </div>
+            <div className="animate-contact-icons flex w-full rounded-2xl bg-green-600">
               <img
-                src="images/email.svg"
+                src="images/phone.svg"
                 alt="email"
                 className="mx-3.5 py-3.5"
               />
-              <p className="my-auto">bluepilkintonching@gmail.com</p>
-            </a>
-            <div className="animate-contact">
-              <img
-                src="images/phone.svg"
-                alt="phone"
-                className="mx-3.5 py-3.5"
-              />
               <p className="my-auto">(+64) 2040982760</p>
+            </div>
+            <div className="animate-contact-icons ">
+              <a
+                href="https://www.instagram.com/blues_profile/"
+                className="flex w-full rounded-2xl bg-green-600 duration-300 hover:brightness-50"
+              >
+                <img
+                  src="images/instagram-icon.svg"
+                  alt="phone"
+                  className="mx-3.5 scale-110 py-3.5"
+                />
+                <p className="my-auto">Instagram</p>
+              </a>
+            </div>
+            <div className="animate-contact-icons ">
+              <a
+                href="https://www.linkedin.com/in/blue-pilkinton-ching/"
+                className="flex w-full rounded-2xl bg-green-600 duration-300 hover:brightness-50"
+              >
+                <img
+                  src="images/linkedin-icon.svg"
+                  alt="phone"
+                  className="mx-3.5 py-3.5"
+                />
+                <p className="my-auto">Linkedin</p>
+              </a>
             </div>
           </div>
         </div>

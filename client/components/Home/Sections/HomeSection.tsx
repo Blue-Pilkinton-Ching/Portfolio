@@ -47,13 +47,17 @@ export function HomeSection() {
           <h2 className="title-animate my-4 font-display text-2xl font-bold text-green-600">
             Fullstack & Interactive Developer
           </h2>
-          {/* <h3 className="font-display text-lg text-white">Portfolio</h3> */}
+          <h3 className="mb-2 max-w-[600px] font-display text-white">
+            Kia ora I&apos;m Blue, welcome to my digital Portfolio. I&apos;m a
+            Wellington based NZ Developer. I&apos;m open to work from potential
+            employers or collaborators so please reach out!
+          </h3>
           <div className="title-animate">
             <Link
               to={`/#contact`}
               className=" mt-3 inline-block rounded-3xl bg-green-600 px-6 py-3.5 font-display text-lg font-semibold text-white duration-300 hover:brightness-50"
             >
-              Get in Touch!
+              Get in Touch
             </Link>
           </div>
 

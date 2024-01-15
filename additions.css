@@ -31,7 +31,9 @@
   background: rgb(38, 38, 38);
   background: linear-gradient(
     0deg,
-    rgba(38, 38, 38, 0) 0%,
+    rgba(38, 38, 38, 1) 0%,
+    rgba(38, 38, 38, 0) 40%,
+    rgba(38, 38, 38, 0) 60%,
     rgba(38, 38, 38, 1) 100%
   );
 }
