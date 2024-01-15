@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { NavBar } from "./NavBar";
 import { useLocation } from "react-router-dom";
+import { Background } from "./Background";
 
 const headerOffset = 40;
 
@@ -82,14 +83,14 @@ export default function Layout() {
             />
           </div>
         ) : (
-          <div className="bg-neutral-800 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
+          <Background>
             <div
-              className="background-fade px-5
-          sm:px-10 md:px-20 lg:px-32"
+              className="px-5
+        sm:px-10 md:px-20 lg:px-32"
             >
               <Outlet />
             </div>
-          </div>
+          </Background>
         )}
       </main>
       {showMenuPanel ? (

@@ -20,4 +20,6 @@ export interface HomeProjectProps {
   technologies: string;
 }
 
-export interface props
+export interface BackgroundProbs {
+  children?: JSX.Element | JSX.Element[];
+}
