@@ -83,14 +83,31 @@ export default function Layout() {
           </div>
         ) : (
           <div
-            className="bg-neutral-800 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] px-7 sm:px-10
+            className="bg-neutral-800 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] px-5 sm:px-10
           md:px-20 lg:px-32"
           >
             <Outlet />
           </div>
         )}
       </main>
-      {/* <footer className=" bg-neutral-900">Copyright &copy; 2038</footer> */}
+      <footer className="flex h-28 items-center justify-between bg-neutral-900 px-[10vw] font-display  text-white shadow-md">
+        <p className="text-2xl">bluepc.me</p>
+        <div className="text-lg">
+          This website was made with <div></div>
+        </div>
+
+        <div className="flex gap-2 *:w-9">
+          <a href="https://linkedin.com/in/blue-pilkinton-ching">
+            <img src="images/linkedin.svg" alt="link to linkedin" />
+          </a>
+          <a href="https://github.com/Blue-Pilkinton-Ching">
+            <img src="images/github.svg" alt="link to github" />
+          </a>
+          <a className="p-1" href="https://www.instagram.com/blues_profile/">
+            <img src="images/instagram.svg" alt="link to instagram" />
+          </a>
+        </div>
+      </footer>
     </>
   );
 }

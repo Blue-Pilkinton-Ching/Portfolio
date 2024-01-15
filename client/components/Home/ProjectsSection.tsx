@@ -33,7 +33,7 @@ export function ProjectsSection() {
   }, [projectsInView]);
 
   return (
-    <section id="projects" className="flex min-h-dvh w-full flex-col">
+    <section id="projects" className="my-20 flex w-full flex-col">
       <div className="my-auto h-full">
         <h4 className="animate-projects-title text-center font-display text-3xl font-bold text-white sm:text-5xl">
           My Projects
