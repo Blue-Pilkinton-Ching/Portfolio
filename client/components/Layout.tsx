@@ -91,7 +91,9 @@ export default function Layout() {
         )}
       </main>
       <footer className="flex h-28 items-center justify-evenly bg-neutral-900 px-[10vw] font-display text-white shadow-md sm:justify-between">
-        <p className="text-2xl">bluepc.me</p>
+        <a className="scroll-smooth text-2xl" href="/#home">
+          bluepc.me
+        </a>
         <div className="mx-auto hidden text-lg sm:block">
           <div className="flex items-center">
             <p className="mr-5 hidden xl:block">This website was built with</p>
