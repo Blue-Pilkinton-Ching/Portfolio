@@ -12,3 +12,10 @@ export interface TechIconProps {
 export interface TechIconsProps {
   classes: string;
 }
+
+export interface HomeProjectProps {
+  id: number;
+  title: string;
+  file: string;
+  technologies: string;
+}

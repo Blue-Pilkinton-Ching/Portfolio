@@ -112,7 +112,7 @@ export function AboutSection() {
   }, [aboutInView, width]);
 
   return (
-    <section id="about" className="center flex min-h-dvh w-full flex-col">
+    <section id="about" className="flex min-h-dvh w-full flex-col">
       <div className="my-auto">
         <div
           ref={about}
@@ -157,19 +157,19 @@ export function AboutSection() {
               </h4>
               <br />
               <div className="text-md font-display font-semibold text-white sm:text-xl xl:min-w-[320px]">
-                <ul className="about-skills-text-animate list-disc text-left">
+                <ul className="about-skills-text-animate list-inside list-disc text-left">
                   <li>Authentication</li>
                   <li>REST API calls</li>
                   <li>Databases</li>
                 </ul>
                 <br />
-                <ul className="about-skills-text-animate list-disc text-left">
+                <ul className="about-skills-text-animate list-inside list-disc text-left">
                   <li>3d & 2d games</li>
                   <li>Multithreaded Code</li>
                   <li>Compute Shaders</li>
                   <li>Multiplayer Networking (Unity)</li>
                 </ul>
-                <ul className="about-skills-text-animate list-disc text-left">
+                <ul className="about-skills-text-animate list-inside list-disc text-left">
                   <li>Multiplayer Matchmaking (Unity)</li>
                   <li>Online voice chat with Vivox</li>
                   <li>Unity VFX & Shader Graph</li>

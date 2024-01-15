@@ -47,8 +47,8 @@ export default function Layout() {
       <header
         className={`fixed z-50 ${
           showMenuPanel ? "bg-neutral-800/0" : "bg-neutral-800/50"
-        } backdrop-brightness-70 width 1023  flex w-screen justify-between  px-10
-        py-8 backdrop-blur-sm lg:px-32`}
+        } backdrop-brightness-70 width 1023  flex w-screen justify-between px-5 py-4 backdrop-blur-sm
+        sm:px-10 sm:py-8 lg:px-32`}
       >
         <a
           className={`font-display text-4xl font-light text-white  ${
@@ -83,7 +83,7 @@ export default function Layout() {
           </div>
         ) : (
           <div
-            className="bg-neutral-800 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] px-10
+            className="bg-neutral-800 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] px-7 sm:px-10
           md:px-20 lg:px-32"
           >
             <Outlet />

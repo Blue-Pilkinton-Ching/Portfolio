@@ -1,5 +1,6 @@
 import { AboutSection } from "./AboutSection";
 import { HomeSection } from "./HomeSection";
+import { ProjectsSection } from "./ProjectsSection";
 
 function HomePage() {
   return (
@@ -7,6 +8,8 @@ function HomePage() {
       <HomeSection />
       <br />
       <AboutSection />
+      <br />
+      <ProjectsSection />
       <br />
     </>
   );
