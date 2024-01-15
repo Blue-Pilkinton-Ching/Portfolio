@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { HomeProject } from "./HomeProject";
+import { HomeProject } from "../HomeProject";
 import { animate, stagger, useInView } from "framer-motion";
 
 export function ProjectsSection() {
@@ -33,7 +33,7 @@ export function ProjectsSection() {
   }, [projectsInView]);
 
   return (
-    <section id="projects" className="flex w-full flex-col py-20">
+    <section id="projects" className="flex min-h-dvh w-full flex-col py-20">
       <div className="my-auto h-full">
         <h4 className="animate-projects-title text-center font-display text-3xl font-bold text-white sm:text-5xl">
           My Projects

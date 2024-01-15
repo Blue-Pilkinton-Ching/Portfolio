@@ -1,8 +1,8 @@
 import { Section } from "../Section";
-import { AboutSection } from "./AboutSection";
-import { ContactSection } from "./ContactSection";
-import { HomeSection } from "./HomeSection";
-import { ProjectsSection } from "./ProjectsSection";
+import { AboutSection } from "./Sections/AboutSection";
+import { ContactSection } from "./Sections/ContactSection";
+import { HomeSection } from "./Sections/HomeSection";
+import { ProjectsSection } from "./Sections/ProjectsSection";
 
 function HomePage() {
   return (

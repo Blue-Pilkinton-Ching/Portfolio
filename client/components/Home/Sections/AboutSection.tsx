@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import GitHubCalendar from "react-github-calendar";
 import { useWindowSize } from "@uidotdev/usehooks";
-import { TechIcons } from "./TechIcons";
+import { TechIcons } from "../TechIcons";
 import { animate, stagger, useInView } from "framer-motion";
 
 export function AboutSection() {

@@ -18,7 +18,10 @@ export function ContactSection() {
   }, [contactInView]);
 
   return (
-    <section id="contact" className="flex w-full flex-col pb-64 pt-48">
+    <section
+      id="contact"
+      className="flex min-h-dvh w-full flex-col pb-64 pt-48"
+    >
       <div className="my-auto h-full" ref={contact}>
         <h4 className="animate-contact text-center font-display text-3xl font-bold text-white sm:text-5xl">
           Contact Me

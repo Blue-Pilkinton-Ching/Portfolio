@@ -3,7 +3,6 @@ import { Outlet } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { NavBar } from "./NavBar";
 import { useLocation } from "react-router-dom";
-import { Section } from "./Section";
 
 const headerOffset = 40;
 
