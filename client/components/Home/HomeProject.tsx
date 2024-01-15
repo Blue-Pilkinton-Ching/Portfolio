@@ -1,27 +1,17 @@
+import { Link } from "react-router-dom";
 import { HomeProjectProps } from "../../../interfaces";
-
-const groups = [
-  "absolute opacity-0 duration-300 group-hover/home-project-1:opacity-100",
-  "absolute opacity-0 duration-300 group-hover/home-project-2:opacity-100",
-  "absolute opacity-0 duration-300 group-hover/home-project-3:opacity-100",
-  "absolute opacity-0 duration-300 group-hover/home-project-4:opacity-100",
-  "absolute opacity-0 duration-300 group-hover/home-project-5:opacity-100",
-  "absolute opacity-0 duration-300 group-hover/home-project-6:opacity-100",
-  "absolute opacity-0 duration-300 group-hover/home-project-7:opacity-100",
-  "absolute opacity-0 duration-300 group-hover/home-project-8:opacity-100",
-  "absolute opacity-0 duration-300 group-hover/home-project-9:opacity-100",
-];
 
 export function HomeProject(props: HomeProjectProps) {
   return (
-    <div
-      className={`group/home-project-${props.id} flex h-min min-w-full max-w-[500px] flex-1 flex-col rounded-xl bg-stone-900 p-5 text-white shadow-md duration-300 hover:scale-105 hover:bg-green-600 sm:w-96 sm:min-w-96`}
+    <Link
+      className={`group/home-project flex h-min min-w-full flex-1 cursor-pointer flex-col rounded-xl bg-stone-900 p-5 text-white shadow-md duration-300 hover:scale-105 hover:bg-green-600 sm:w-[500px]`}
+      to={"projects/" + props.page}
     >
       <div className="flex w-full items-center justify-between pt-2">
         <h5 className="pl-3 font-display text-2xl">{props.title}</h5>
         <div className="w-11 rotate-180">
           <img
-            className={groups[props.id]}
+            className="absolute opacity-0 duration-300 group-hover/home-project:opacity-100"
             src="images/arrow-white.svg"
             alt="arrow"
           />
@@ -29,7 +19,7 @@ export function HomeProject(props: HomeProjectProps) {
         </div>
       </div>
       <div
-        className={`whitespace-pre pl-3 pt-2 font-display text-sm text-zinc-400 group-hover/home-project-${props.id}:text-neutral-800 duration-300 `}
+        className={`whitespace-pre text-wrap pl-3 pt-2 font-display text-sm text-zinc-400 duration-300 group-hover/home-project:text-white `}
       >
         {props.technologies}
       </div>
@@ -38,6 +28,6 @@ export function HomeProject(props: HomeProjectProps) {
         src={`images/projects/${props.file}.png`}
         alt={props.file}
       />
-    </div>
+    </Link>
   );
 }

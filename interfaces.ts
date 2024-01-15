@@ -14,8 +14,8 @@ export interface TechIconsProps {
 }
 
 export interface HomeProjectProps {
-  id: number;
   title: string;
   file: string;
+  page: string;
   technologies: string;
 }
