@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { NavBar } from "./NavBar";
 import { useLocation } from "react-router-dom";
-import { Background } from "./Background";
+import { Section } from "./Section";
 
 const headerOffset = 40;
 
@@ -83,14 +83,7 @@ export default function Layout() {
             />
           </div>
         ) : (
-          <Background>
-            <div
-              className="px-5
-        sm:px-10 md:px-20 lg:px-32"
-            >
-              <Outlet />
-            </div>
-          </Background>
+          <Outlet />
         )}
       </main>
       {showMenuPanel ? (
