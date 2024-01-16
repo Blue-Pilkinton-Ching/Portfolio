@@ -1,4 +1,4 @@
-import { FormEvent, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { animate, stagger, useInView } from "framer-motion";
 
 export function ContactSection() {
@@ -104,29 +104,24 @@ export function ContactSection() {
           <h5 className="animate-contact-icons font-display text-3xl font-semibold text-white">
             Send an Email
           </h5>
-          <form
-            className="mx-auto w-full max-w-[600px] text-white *:w-full"
-            ref={emailForm}
-          >
-            <div className="font-display *:w-full *:rounded-xl *:border-4 *:border-green-600 *:bg-transparent *:p-2 *:outline-none">
-              <br />
-              <textarea
-                placeholder="Email..."
-                name="comment"
-                className="animate-contact-icons h-32"
-              />
-              <br />
-              <br />
-            </div>
-            <div className="animate-contact-icons">
-              <input
-                type="button"
-                value="Submit"
-                className="h-10 w-40 cursor-pointer rounded-3xl bg-green-600 duration-300 hover:brightness-50"
-                onClick={submit}
-              />
-            </div>
-          </form>
+          <br />
+
+          <textarea
+            placeholder="Email..."
+            name="comment"
+            className="animate-contact-icons mx-auto h-32 w-full max-w-[600px] rounded-xl border-4 border-green-600 bg-transparent p-2 font-display outline-none"
+          />
+          <br />
+          <br />
+
+          <div className="animate-contact-icons">
+            <input
+              type="button"
+              value="Submit"
+              className="h-10 w-40 cursor-pointer rounded-3xl bg-green-600 text-white duration-300 hover:brightness-50"
+              onClick={submit}
+            />
+          </div>
         </div>
       </div>
     </section>
