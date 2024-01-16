@@ -1,7 +1,7 @@
-import { httpServer } from './server' // Adjust the import to a named import
+import { httpServer } from "./server"; // Adjust the import to a named import
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3001;
 
 httpServer.listen(port, function () {
-  console.log('Listening on port', port) // Removed eslint-disable-line for brevity
-})
+  console.log("Listening on port", port); // Removed eslint-disable-line for brevity
+});
