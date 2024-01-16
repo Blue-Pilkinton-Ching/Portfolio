@@ -16,7 +16,7 @@ export function ContactSection() {
         { duration: 0.5, delay: stagger(0.1), ease: "circOut" },
       );
     } else {
-      animate(".animate-contact", { opacity: 0, y: 75 }, {});
+      animate(".animate-contact", { opacity: 0, y: 75 }, { duration: 0 });
     }
   }, [contactInView]);
 
@@ -32,7 +32,7 @@ export function ContactSection() {
         },
       );
     } else {
-      animate(".animate-contact-icons", { opacity: 0, y: 75 }, {});
+      animate(".animate-contact-icons", { opacity: 0, y: 75 }, { duration: 0 });
     }
   }, [iconsInView]);
 
@@ -101,7 +101,7 @@ export function ContactSection() {
           </div>
           <br />
           <br />
-          <h5 className="font-display text-3xl font-semibold text-white">
+          <h5 className="animate-contact-icons font-display text-3xl font-semibold text-white">
             Send an Email
           </h5>
           <form
@@ -110,20 +110,19 @@ export function ContactSection() {
           >
             <div className="font-display *:w-full *:rounded-xl *:border-4 *:border-green-600 *:bg-transparent *:p-2 *:outline-none">
               <br />
-
               <textarea
-                placeholder="Comment"
+                placeholder="Email..."
                 name="comment"
-                className="h-32 "
+                className="animate-contact-icons h-32"
               />
               <br />
               <br />
             </div>
-            <div>
+            <div className="animate-contact-icons">
               <input
                 type="button"
                 value="Submit"
-                className="h-10 w-40 cursor-pointer rounded-3xl bg-green-600 hover:brightness-50"
+                className="h-10 w-40 cursor-pointer rounded-3xl bg-green-600 duration-300 hover:brightness-50"
                 onClick={submit}
               />
             </div>
