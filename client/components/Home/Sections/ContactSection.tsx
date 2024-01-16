@@ -109,7 +109,7 @@ export function ContactSection() {
           <textarea
             placeholder="Email..."
             name="comment"
-            className="animate-contact-icons mx-auto h-32 w-full max-w-[600px] rounded-xl border-4 border-green-600  bg-transparent p-2 font-display text-white outline-none"
+            className="animate-contact-icons mx-auto h-32 w-full max-w-[600px] rounded-xl border-4 border-green-600  bg-transparent p-3 font-display text-white outline-none"
             ref={textArea}
           />
           <br />
