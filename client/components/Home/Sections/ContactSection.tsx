@@ -6,7 +6,7 @@ export function ContactSection() {
   const icons = useRef(null);
   const contactInView = useInView(contact);
   const iconsInView = useInView(icons);
-  const emailForm = useRef(null);
+  const textArea = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
     if (contactInView) {
@@ -109,7 +109,8 @@ export function ContactSection() {
           <textarea
             placeholder="Email..."
             name="comment"
-            className="animate-contact-icons mx-auto h-32 w-full max-w-[600px] rounded-xl border-4 border-green-600 bg-transparent p-2 font-display outline-none"
+            className="animate-contact-icons mx-auto h-32 w-full max-w-[600px] rounded-xl border-4 border-green-600  bg-transparent p-2 font-display text-white outline-none"
+            ref={textArea}
           />
           <br />
           <br />
@@ -129,12 +130,8 @@ export function ContactSection() {
 
   function submit() {
     console.log("Submitting Form");
-    const form = document.forms[0];
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const elements = form.elements as any;
-
-    const comment = elements["comment"].value;
+    const comment = textArea.current?.value;
 
     if (comment) {
       const mailtoLink = `mailto:bluepilkinonching@gmail.com?subject=Enquiry&body=${encodeURIComponent(
