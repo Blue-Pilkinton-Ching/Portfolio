@@ -1,11 +1,11 @@
 import { Route, createRoutesFromElements } from "react-router-dom";
 import Layout from "./components/Layout";
 import HomePage from "./components/Home/HomePage";
-import FrogPage from "./components/FrogPage";
+import ProjectPage from "./components/ProjectPage";
 
 export default createRoutesFromElements(
   <Route path="/" element={<Layout />}>
     <Route index element={<HomePage />} />
-    <Route path="/frogs/:name" element={<FrogPage />} />
+    <Route path="/projects/:projects" element={<ProjectPage />} />
   </Route>,
 );
