@@ -10,13 +10,39 @@ export default function ProjectPage() {
   switch (project) {
     case "prepaygpt":
       content = (
-        <Project title="PrePay GPT" file="PrePayGPT" information="asdjasd" />
+        <Project
+          title="PrePay GPT"
+          imageFile="PrePayGPT"
+          information="asd j asda  sdjasda sdj as da sd asdas jas  sdjas  a  jas das d ja sda sdjasd asdjasd asd j asda  sdjasda sdj as da sd asdas jas  sdjas  a  jas das d ja sda sdjasd asdjasd asd j asda  sdjasda sdj as da sd asdas jas  sdjas  a  jas das d ja sda sdjasd asdjasd "
+          demoOptions={[
+            {
+              type: "instagram",
+              link: "https://www.instagram.com/blues_profile/",
+              file: "instagram-icon",
+            },
+            {
+              type: "demo",
+              link: "https://prepaygpt.xyz",
+              file: "",
+            },
+            {
+              type: "video",
+              link: "https://youtube.com",
+              file: "",
+            },
+          ]}
+        />
       );
       break;
 
     case "games":
       content = (
-        <Project title="2d & 3d Games" file="PrePayGPT" information="asdjasd" />
+        <Project
+          title="2d & 3d Games"
+          imageFile="PrePayGPT"
+          information="asdjasd"
+          demoOptions={[]}
+        />
       );
       break;
 
@@ -24,8 +50,9 @@ export default function ProjectPage() {
       content = (
         <Project
           title="Models & Renders"
-          file="PrePayGPT"
+          imageFile="PrePayGPT"
           information="asdjasd"
+          demoOptions={[]}
         />
       );
       break;

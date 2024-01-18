@@ -26,6 +26,13 @@ export interface BackgroundProbs {
 
 export interface ProjectProps {
   title: string;
-  file: string;
+  imageFile: string;
   information: string;
+  demoOptions: DemoOptionData[];
+}
+
+export interface DemoOptionData {
+  type: "instagram" | "demo" | "video";
+  file: string;
+  link: string;
 }
