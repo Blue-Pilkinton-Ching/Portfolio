@@ -12,10 +12,10 @@ export function HomeProject(props: HomeProjectProps) {
         <div className="w-11 rotate-180">
           <img
             className="absolute opacity-0 duration-300 group-hover/home-project:opacity-100"
-            src="images/arrow-white.svg"
+            src="/images/arrow-white.svg"
             alt="arrow"
           />
-          <img src="images/arrow.svg" alt="arrow" />
+          <img src="/images/arrow.svg" alt="arrow" />
         </div>
       </div>
       <div

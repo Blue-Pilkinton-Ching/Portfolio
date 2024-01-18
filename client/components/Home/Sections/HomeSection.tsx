@@ -63,20 +63,20 @@ export function HomeSection() {
 
           <div className="title-animate mt-5 flex gap-2 *:w-9">
             <a href="https://linkedin.com/in/blue-pilkinton-ching">
-              <img src="images/linkedin.svg" alt="link to linkedin" />
+              <img src="/images/linkedin.svg" alt="link to linkedin" />
             </a>
             <a href="https://github.com/Blue-Pilkinton-Ching">
-              <img src="images/github.svg" alt="link to github" />
+              <img src="/images/github.svg" alt="link to github" />
             </a>
             <a className="p-1" href="https://www.instagram.com/blues_profile/">
-              <img src="images/instagram.svg" alt="link to instagram" />
+              <img src="/images/instagram.svg" alt="link to instagram" />
             </a>
           </div>
         </div>
         {width != null && width > 767 ? (
           <div className="title-image-animate ml-4 w-[30vw] max-w-[500px]">
             <img
-              src="images/headshot.png"
+              src="/images/headshot.png"
               alt="headshot of Blue PC"
               className="aspect-square rounded-xl object-cover shadow-lg"
             />

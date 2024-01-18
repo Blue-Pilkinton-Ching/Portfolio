@@ -57,7 +57,7 @@ export function ContactSection() {
                 className="flex w-full rounded-2xl bg-green-600 duration-300 hover:brightness-50"
               >
                 <img
-                  src="images/email.svg"
+                  src="/images/email.svg"
                   alt="email"
                   className="mx-3.5 py-3.5"
                 />
@@ -66,7 +66,7 @@ export function ContactSection() {
             </div>
             <div className="animate-contact-icons flex w-full rounded-2xl bg-green-600 shadow-md">
               <img
-                src="images/phone.svg"
+                src="/images/phone.svg"
                 alt="email"
                 className="mx-3.5 py-3.5"
               />
@@ -78,7 +78,7 @@ export function ContactSection() {
                 className="flex w-full rounded-2xl bg-neutral-900 duration-300 hover:brightness-50"
               >
                 <img
-                  src="images/instagram-icon.svg"
+                  src="/images/instagram-icon.svg"
                   alt="phone"
                   className="mx-3.5 scale-110 py-3.5"
                 />
@@ -91,7 +91,7 @@ export function ContactSection() {
                 className="flex w-full rounded-2xl bg-neutral-900 duration-300 hover:brightness-50"
               >
                 <img
-                  src="images/linkedin-icon.svg"
+                  src="/images/linkedin-icon.svg"
                   alt="phone"
                   className="mx-3.5 py-3.5"
                 />

@@ -1,4 +1,4 @@
-import { Section } from "../Section";
+import { BackgroundSection } from "../BackgroundSection";
 import { AboutSection } from "./Sections/AboutSection";
 import { ContactSection } from "./Sections/ContactSection";
 import { HomeSection } from "./Sections/HomeSection";
@@ -7,22 +7,22 @@ import { ProjectsSection } from "./Sections/ProjectsSection";
 function HomePage() {
   return (
     <>
-      <Section>
+      <BackgroundSection>
         <HomeSection />
         <br />
-      </Section>
-      <Section>
+      </BackgroundSection>
+      <BackgroundSection>
         <AboutSection />
         <br />
-      </Section>
-      <Section>
+      </BackgroundSection>
+      <BackgroundSection>
         <ProjectsSection />
         <br />
-      </Section>
-      <Section>
+      </BackgroundSection>
+      <BackgroundSection>
         <ContactSection />
         <br />
-      </Section>
+      </BackgroundSection>
     </>
   );
 }

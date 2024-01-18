@@ -23,3 +23,9 @@ export interface HomeProjectProps {
 export interface BackgroundProbs {
   children?: JSX.Element | JSX.Element[];
 }
+
+export interface ProjectProps {
+  title: string;
+  file: string;
+  information: string;
+}

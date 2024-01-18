@@ -98,12 +98,12 @@ export default function Layout() {
                 This website was built with
               </p>
               <div className="flex flex-row gap-2 *:w-9">
-                <img src="images/tech-icons/typescript.svg" alt="typescript" />
+                <img src="/images/tech-icons/typescript.svg" alt="typescript" />
                 <img
-                  src="images/tech-icons/tailwindcss.svg"
+                  src="/images/tech-icons/tailwindcss.svg"
                   alt="tailwindcss"
                 />
-                <img src="images/tech-icons/react.svg" alt="react" />
+                <img src="/images/tech-icons/react.svg" alt="react" />
               </div>
             </div>
           </div>
@@ -111,21 +111,21 @@ export default function Layout() {
             <a href="https://linkedin.com/in/blue-pilkinton-ching">
               <img
                 className="w-9"
-                src="images/linkedin.svg"
+                src="/images/linkedin.svg"
                 alt="link to linkedin"
               />
             </a>
             <a href="https://github.com/Blue-Pilkinton-Ching">
               <img
                 className="w-9"
-                src="images/github.svg"
+                src="/images/github.svg"
                 alt="link to github"
               />
             </a>
             <a href="https://www.instagram.com/blues_profile/">
               <img
                 className="w-9 scale-90"
-                src="images/instagram.svg"
+                src="/images/instagram.svg"
                 alt="link to instagram"
               />
             </a>
