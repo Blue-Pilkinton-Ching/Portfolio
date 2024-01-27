@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { BackgroundSection } from "./BackgroundSection";
 import { Project } from "./Project";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TechIcon } from "./Home/TechIcon";
 
 export default function ProjectPage() {
@@ -13,6 +13,10 @@ export default function ProjectPage() {
   function setVideo(video: string) {
     setPlayingVideo(video);
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   switch (project) {
     case "prepaygpt":
