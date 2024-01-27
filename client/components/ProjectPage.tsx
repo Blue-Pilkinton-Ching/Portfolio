@@ -46,14 +46,13 @@ export default function ProjectPage() {
           }
           icons={
             <>
-              <TechIcon sm iconName="typescript" />
-              <TechIcon sm iconName="react" />
-              <TechIcon sm iconName="html" />
-              <TechIcon sm iconName="css" />
-              <TechIcon sm iconName="firebase" />
-              <TechIcon sm iconName="nodejs" />
-              <TechIcon sm iconName="vscode" />
-              <TechIcon sm iconName="ubuntu" />
+              <TechIcon iconName="typescript" />
+              <TechIcon iconName="react" />
+              <TechIcon iconName="html" />
+              <TechIcon iconName="css" />
+              <TechIcon iconName="firebase" />
+              <TechIcon iconName="nodejs" />
+              <TechIcon iconName="ubuntu" />
             </>
           }
           playVideo={setVideo}
@@ -67,6 +66,11 @@ export default function ProjectPage() {
               type: "video",
               link: "https://www.youtube.com/embed/tgbNymZ7vqY",
               icon: "play",
+            },
+            {
+              type: "source",
+              link: "https://github.com/Blue-Pilkinton-Ching/ChatGPT-Website/tree/main",
+              icon: "github-white",
             },
           ]}
         />

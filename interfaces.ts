@@ -35,7 +35,7 @@ export interface ProjectProps {
 }
 
 export interface DemoOptionData {
-  type: "instagram" | "demo" | "video";
+  type: "instagram" | "demo" | "video" | "source";
   icon: string;
   link: string;
 }
