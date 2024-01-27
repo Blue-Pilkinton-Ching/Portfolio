@@ -64,7 +64,7 @@ export default function ProjectPage() {
             },
             {
               type: "video",
-              link: "https://www.youtube.com/embed/tgbNymZ7vqY",
+              link: "https://www.youtube.com/embed/w87836Q_MfY",
               icon: "play",
             },
             {
