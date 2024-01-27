@@ -110,11 +110,11 @@ export default function ProjectPage() {
   return (
     <>
       <BackgroundSection>
-        <div className={`scroll min-h-dvh w-full ${scroll}`}>
+        <div className={`scroll h-full w-full ${scroll}`}>
           {content}
           {playingVideo ? (
             <button
-              className="fixed left-0 top-0 z-[100] h-dvh w-full bg-neutral-400/10 backdrop-blur-xl "
+              className="fixed left-0 top-0 z-[100] h-dvh w-full bg-neutral-400/5 backdrop-blur-xl "
               onClick={() => setPlayingVideo("")}
             >
               <div className="mx-auto aspect-video w-[95%] sm:w-[80%] lg:w-[60%]">
