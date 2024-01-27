@@ -16,6 +16,7 @@ export function TechIcons(props: TechIconsProps) {
       <TechIcon iconName="unity" />
       <TechIcon iconName="unreal-engine" iconTitle="unreal engine" />
       <TechIcon iconName="vscode" />
+      <TechIcon iconName="git" />
       <TechIcon iconName="ubuntu" />
     </div>
   );
