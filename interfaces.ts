@@ -27,12 +27,13 @@ export interface BackgroundProbs {
 export interface ProjectProps {
   title: string;
   imageFile: string;
-  information: string;
+  content: JSX.Element;
   demoOptions: DemoOptionData[];
+  playVideo?: (video: string) => void;
 }
 
 export interface DemoOptionData {
   type: "instagram" | "demo" | "video";
-  file: string;
+  icon: string;
   link: string;
 }

@@ -3,62 +3,80 @@ import { ProjectProps } from "../../interfaces";
 export function Project(props: ProjectProps) {
   return (
     <section className="pt-28">
-      <h1 className="text-center font-display text-5xl font-semibold text-white">
-        {props.title}
-      </h1>
-      <br />
-      <div className="mx-auto flex w-full max-w-[900px] flex-col-reverse items-center justify-center gap-10">
-        <p className="max-w-full flex-1 text-wrap text-justify font-display text-lg font-semibold text-white">
-          {props.information}
-        </p>
-        <div className="flex-1">
-          <img
-            src={`/images/projects/${props.imageFile}.png`}
-            alt={`${props.title}`}
-            className=""
-          />
-        </div>
-      </div>
-      <br />
-      <div className="flex max-w-[500] flex-wrap justify-center gap-5">
-        {props.demoOptions.map((element, index) => {
-          let content;
+      <div className="mx-auto w-[95%] max-w-[900px] sm:w-[80%]">
+        <img
+          src={`/images/projects/${props.imageFile}.png`}
+          alt={`${props.title}`}
+          className=""
+        />
+        <h1 className="py-3 text-center font-display text-4xl font-semibold text-white sm:text-5xl">
+          {props.title}
+        </h1>
+        <div className="flex max-w-[500] flex-wrap justify-center gap-5 py-10">
+          {props.demoOptions.map((element, index) => {
+            let content;
 
-          switch (element.type) {
-            case "instagram":
-              content = (
-                <>
-                  <a href={element.link} className="flex items-center gap-3">
+            switch (element.type) {
+              case "instagram":
+                content = (
+                  <a href={element.link}>
                     <img
                       className="w-10"
-                      src={`/images/${element.file}.svg`}
+                      src={`/images/${element.icon}.svg`}
                       alt=""
                     />
                     Digital Projects
                   </a>
-                </>
-              );
-              break;
+                );
+                break;
 
-            case "demo":
-              content = <a href={element.link}>Live Demo</a>;
-              break;
+              case "demo":
+                content = (
+                  <a href={element.link}>
+                    <img
+                      className="w-10"
+                      src={`/images/${element.icon}.svg`}
+                      alt=""
+                    />
+                    Live Demo
+                  </a>
+                );
+                break;
 
-            case "video":
-              content = <a href={element.link}>Video Demo</a>;
-              break;
-          }
+              case "video":
+                content = (
+                  <button
+                    onClick={() =>
+                      props.playVideo ? props.playVideo(element.link) : ""
+                    }
+                  >
+                    <img
+                      className="w-10"
+                      src={`/images/${element.icon}.svg`}
+                      alt=""
+                    />
+                    Video Demo
+                  </button>
+                );
+                break;
+            }
 
-          return (
-            <div
-              className="font-display text-white *:flex *:w-56 *:rounded-2xl *:bg-green-600 *:px-5 *:py-2 hover:*:brightness-50"
-              key={index}
-            >
-              {content}
-            </div>
-          );
-        })}
+            return (
+              <div
+                className="font-display text-white *:flex *:w-56 *:items-center *:gap-3 *:rounded-2xl *:bg-green-600 *:px-5 *:py-2 hover:*:brightness-50"
+                key={index}
+              >
+                {content}
+              </div>
+            );
+          })}
+        </div>
+        <br />
+        <p className="max-w-full flex-1 text-wrap text-justify font-display text-lg font-semibold text-white">
+          {props.content}
+        </p>
       </div>
+      <br />
       <br />
     </section>
   );
