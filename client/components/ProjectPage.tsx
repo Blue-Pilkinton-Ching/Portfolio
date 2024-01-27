@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { BackgroundSection } from "./BackgroundSection";
 import { Project } from "./Project";
 import { useState } from "react";
+import { TechIcon } from "./Home/TechIcon";
 
 export default function ProjectPage() {
   const { project } = useParams();
@@ -21,10 +22,38 @@ export default function ProjectPage() {
           imageFile="PrePayGPT"
           content={
             <>
-              asd j asda sdjasda sdj as da sd asdas jas sdjas a jas das d ja sda
-              sdjasd asdjasd asd j asda sdjasda sdj as da sd asdas jas sdjas a
-              jas das d ja sda sdjasd asdjasd asd j asda sdjasda sdj as da sd
-              asdas jas sdjas a jas das d ja sda sdjasd asdjasd
+              PrePay GPT is a site I recently created for interfacing with Open
+              AI GPT Models. The advantage it has over the over the official
+              ChatGPT, is that you can access and pay for GPT-4 on a per-message
+              basis, rather than having to subscribe to the more expensive
+              premium service offered by Open AI. <br />
+              <br />
+              This project makes use of many services provided by Google
+              Firebase. Some of the technologies & skills I&apos;ve used in this
+              project include:
+              <br />
+              <br />
+              <div className="flex w-full justify-around">
+                <ul className="list-inside list-disc">
+                  <li>Authentication</li>
+                  <li>Nosql database (firestore)</li>
+                  <li>Pagination</li>
+                </ul>
+              </div>
+              <br />
+              PrePay GPT is hosted on an Oracle Cloud VPS.
+            </>
+          }
+          icons={
+            <>
+              <TechIcon sm iconName="typescript" />
+              <TechIcon sm iconName="react" />
+              <TechIcon sm iconName="html" />
+              <TechIcon sm iconName="css" />
+              <TechIcon sm iconName="firebase" />
+              <TechIcon sm iconName="nodejs" />
+              <TechIcon sm iconName="vscode" />
+              <TechIcon sm iconName="ubuntu" />
             </>
           }
           playVideo={setVideo}
@@ -52,6 +81,7 @@ export default function ProjectPage() {
           content={<>asdjasd</>}
           demoOptions={[]}
           playVideo={setVideo}
+          icons={<></>}
         />
       );
       break;
@@ -63,6 +93,7 @@ export default function ProjectPage() {
           imageFile="PrePayGPT"
           content={<>asdjasd</>}
           demoOptions={[]}
+          icons={<></>}
         />
       );
       break;

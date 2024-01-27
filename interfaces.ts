@@ -7,6 +7,7 @@ export interface NavBarProps {
 export interface TechIconProps {
   iconName: string;
   iconTitle?: string;
+  sm?: boolean;
 }
 
 export interface TechIconsProps {
@@ -30,6 +31,7 @@ export interface ProjectProps {
   content: JSX.Element;
   demoOptions: DemoOptionData[];
   playVideo?: (video: string) => void;
+  icons: JSX.Element;
 }
 
 export interface DemoOptionData {

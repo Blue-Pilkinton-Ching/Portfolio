@@ -71,10 +71,11 @@ export function Project(props: ProjectProps) {
             );
           })}
         </div>
+        <div className="flex flex-wrap justify-center">{props.icons}</div>
         <br />
-        <p className="max-w-full flex-1 text-wrap text-justify font-display text-lg font-semibold text-white">
+        <div className="max-w-full text-wrap text-justify font-display text-lg font-semibold text-white">
           {props.content}
-        </p>
+        </div>
       </div>
       <br />
       <br />
