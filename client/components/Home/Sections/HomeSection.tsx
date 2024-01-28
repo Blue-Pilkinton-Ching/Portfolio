@@ -47,7 +47,7 @@ export function HomeSection() {
           <h2 className="title-animate my-4 font-display text-2xl font-bold text-green-600">
             Fullstack & Interactive Developer
           </h2>
-          <h3 className="title-animate mb-2 max-w-[600px] font-display text-white">
+          <h3 className="title-animate mb-2 max-w-[600px] font-display text-lg text-white">
             Kia ora I&apos;m Blue, welcome to my digital Portfolio. I&apos;m a
             Wellington based NZ Developer. I&apos;m open to work from potential
             employers or collaborators so please reach out!
