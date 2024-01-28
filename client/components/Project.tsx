@@ -72,7 +72,7 @@ export function Project(props: ProjectProps) {
           alt={`${props.title}`}
           className="animate-image"
         />
-        <div className="animate-icons flex flex-wrap justify-center">
+        <div className="animate-icons flex flex-wrap items-center justify-center ">
           {props.icons}
         </div>
         <br />

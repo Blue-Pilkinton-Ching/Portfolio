@@ -63,7 +63,7 @@ export function ProjectsSection() {
           <div className="animate-projects">
             <HomeProject
               title="Models & Renders"
-              file="PrePayGPT"
+              file="Renders"
               technologies="maya  •  substance painter  •  blender"
               page="models-renders"
             />

@@ -90,11 +90,11 @@ export default function ProjectPage() {
             <>
               A large amount of my time spent programming has been working on
               games. Most of this takes place inside the Unity Engine, but
-              I&apos;ve also worked with Unreal. I&apos;ve developed a large
-              variety of games of different styles including low poly, tilemap
-              based, hyper relistic, and 2d & 3d. Some of the skills and
-              technologies I&apos;ve utilized in my Game Development journey
-              includes:
+              I&apos;ve also worked with Unreal, and a tiny bit of PhaserJS.
+              I&apos;ve developed a large variety of games of different styles
+              including low poly, tilemap based, hyper relistic, and 2d & 3d.
+              Some of the skills and technologies I&apos;ve utilized in my Game
+              Development journey includes:
               <br />
               <br />
               <div className="flex w-full justify-around text-left *:*:max-w-60 *:list-inside *:list-disc">
@@ -121,7 +121,7 @@ export default function ProjectPage() {
               I&apos;ve been in involved in a number of Game Jams, and worked in
               small teams on multiple game related projects. I go into further
               detail on a few specific games I&apos;ve made (inlcuding renders
-              of mine) on my instagram below.
+              of mine) can be found on my instagram below.
             </>
           }
           demoOptions={[
@@ -132,19 +132,55 @@ export default function ProjectPage() {
             },
           ]}
           playVideo={setVideo}
-          icons={<></>}
+          icons={
+            <>
+              <TechIcon iconName="csharp" iconTitle="c#" />
+              <TechIcon iconName="unity" />
+              <TechIcon iconName="unreal-engine" iconTitle="unreal engine" />
+            </>
+          }
         />
       );
       break;
 
-    case "modelsrenders":
+    case "models-renders":
       content = (
         <Project
           title="Models & Renders"
-          imageFile="PrePayGPT"
-          content={<>asdjasd</>}
-          demoOptions={[]}
-          icons={<></>}
+          imageFile="Renders"
+          content={
+            <>
+              For 12 months I studied for an animation diploma at Yoobee
+              Colleges in Wellington. At this course I learnt the fundementals
+              of digital 3d modeling, rendering, texturing, and 2d & 3d
+              animation. <br />
+              <br />
+              These digital skills arn&apos;t the main ones I focus on. I am
+              more interested and knowlegable in programming, however this
+              course has done a good job at teaching me how to work with and
+              manipulate 3d objects, as well as giving me a deeper level of
+              understanding of design and the full game development workflow.{" "}
+              <br />
+              <br />
+              Many of the models & renders I&apos;ve made (inlcuding other
+              game-related projects) can be found on my instagram below.
+            </>
+          }
+          demoOptions={[
+            {
+              icon: "instagram-icon",
+              link: "https://www.instagram.com/blues_profile/",
+              type: "instagram",
+            },
+          ]}
+          icons={
+            <>
+              <TechIcon iconName="blender" />
+              <TechIcon sm iconName="maya" iconTitle="autodesk maya" />
+              <TechIcon iconName="substance" iconTitle="substance painter" />
+              <TechIcon sm iconName="adobe" iconTitle="adobe creative suite" />
+            </>
+          }
         />
       );
       break;
