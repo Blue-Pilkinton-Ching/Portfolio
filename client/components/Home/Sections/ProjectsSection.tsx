@@ -55,7 +55,7 @@ export function ProjectsSection() {
           <div className="animate-projects">
             <HomeProject
               title="Games"
-              file="PrePayGPT"
+              file="Games"
               technologies="unity  •  c#  •  unreal"
               page="games"
             />

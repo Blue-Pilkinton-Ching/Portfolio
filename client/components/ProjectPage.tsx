@@ -37,8 +37,8 @@ export default function ProjectPage() {
               project include:
               <br />
               <br />
-              <div className="flex w-full justify-around">
-                <ul className="list-inside list-disc">
+              <div className="flex w-full justify-around text-left *:*:max-w-60 *:list-inside *:list-disc">
+                <ul>
                   <li>Authentication</li>
                   <li>Nosql database (firestore)</li>
                   <li>Pagination</li>
@@ -85,9 +85,52 @@ export default function ProjectPage() {
       content = (
         <Project
           title="2d & 3d Games"
-          imageFile="PrePayGPT"
-          content={<>asdjasd</>}
-          demoOptions={[]}
+          imageFile="Games"
+          content={
+            <>
+              A large amount of my time spent programming has been working on
+              games. Most of this takes place inside the Unity Engine, but
+              I&apos;ve also worked with Unreal. I&apos;ve developed a large
+              variety of games of different styles including low poly, tilemap
+              based, hyper relistic, and 2d & 3d. Some of the skills and
+              technologies I&apos;ve utilized in my Game Development journey
+              includes:
+              <br />
+              <br />
+              <div className="flex w-full justify-around text-left *:*:max-w-60 *:list-inside *:list-disc">
+                <ul>
+                  <li>Unity Gaming Services</li>
+                  <li>Authentication</li>
+                  <li>Multiplayer Networking</li>
+                  <li>Multiplayer Matchmaking</li>
+                  <li>Online voice chat</li>
+                </ul>
+                <ul>
+                  <li>Unreal Material Editor</li>
+                  <li>Unreal Blueprints</li>
+                  <li>Unity Shader, VFX Graph</li>
+                  <li>3d animations, models & textures</li>
+                </ul>
+                <ul>
+                  <li>Compute Shaders</li>
+                  <li>Multithreaded code</li>
+                  <li>C# debugging & breakpoints</li>
+                </ul>
+              </div>
+              <br />
+              I&apos;ve been in involved in a number of Game Jams, and worked in
+              small teams on multiple game related projects. I go into further
+              detail on a few specific games I&apos;ve made (inlcuding renders
+              of mine) on my instagram below.
+            </>
+          }
+          demoOptions={[
+            {
+              icon: "instagram-icon",
+              link: "https://www.instagram.com/blues_profile/",
+              type: "instagram",
+            },
+          ]}
           playVideo={setVideo}
           icons={<></>}
         />
