@@ -29,8 +29,6 @@ export function AboutSection() {
   useEffect(() => {
     if (width && width < 884) {
       setShouldScroll(true);
-    } else {
-      setShouldScroll(false);
     }
   }, [width]);
 
