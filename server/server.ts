@@ -10,9 +10,9 @@ app.use(express.json());
 // Uncomment in production
 // Comment in dev
 
-//   app.use(express.static(path.resolve('dist')))
-//   app.get('*', (req, res) => {
-//     res.sendFile(path.resolve('dist', 'index.html'))
-//   })
+app.use(express.static(path.resolve("dist")));
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve("dist", "index.html"));
+});
 
 export { httpServer };
