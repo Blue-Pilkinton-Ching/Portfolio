@@ -1,5 +1,4 @@
 export interface NavBarProps {
-  lastItemClasses: string;
   classes: string;
   onItemClick: () => void;
 }

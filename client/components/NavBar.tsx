@@ -24,7 +24,6 @@ export function NavBar(props: NavBarProps) {
         onClick={onItemClick}
         href="./cv.pdf"
         download="CV - Blue Pilkinton-Ching.pdf"
-        className={props.lastItemClasses}
       >
         RESUME
       </a>

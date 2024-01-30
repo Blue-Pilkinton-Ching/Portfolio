@@ -62,7 +62,6 @@ export default function Layout() {
           <NavBar
             onItemClick={onNavBarItemClicked}
             classes="flex flex-auto justify-end *:my-auto *:px-4 *:py-0.5 *:font-display *:text-lg *:font-medium *:text-white *:duration-300 hover:*:brightness-50"
-            lastItemClasses="p w-32 rounded-full bg-green-600 text-center"
           />
         ) : (
           <button className="container" onClick={onMenuButton} ref={menuButton}>
@@ -78,7 +77,6 @@ export default function Layout() {
             <NavBar
               onItemClick={onNavBarItemClicked}
               classes="h-full flex justify-center items-center flex-col *:px-2 *:py-0.5 *:font-display *:text-lg *:font-medium *:text-white *:duration-300 hover:*:brightness-50"
-              lastItemClasses="p w-32 rounded-full bg-neutral-800 text-center"
             />
           </div>
         ) : (
