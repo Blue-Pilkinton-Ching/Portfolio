@@ -86,7 +86,7 @@ export function Project(props: ProjectProps) {
             switch (element.type) {
               case "instagram":
                 content = (
-                  <a href={element.link}>
+                  <a href={element.link} target="_blank" rel="noreferrer">
                     <img
                       className="w-10"
                       src={`/images/${element.icon}.svg`}

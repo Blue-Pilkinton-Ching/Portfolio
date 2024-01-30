@@ -108,21 +108,33 @@ export default function Layout() {
             </div>
           </div>
           <div className="flex flex-row gap-2">
-            <a href="https://linkedin.com/in/blue-pilkinton-ching">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://linkedin.com/in/blue-pilkinton-ching"
+            >
               <img
                 className="w-9"
                 src="/images/linkedin.svg"
                 alt="link to linkedin"
               />
             </a>
-            <a href="https://github.com/Blue-Pilkinton-Ching">
+            <a
+              href="https://github.com/Blue-Pilkinton-Ching"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 className="w-9"
                 src="/images/github.svg"
                 alt="link to github"
               />
             </a>
-            <a href="https://www.instagram.com/blues_profile/">
+            <a
+              href="https://www.instagram.com/blues_profile/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 className="w-9 scale-90"
                 src="/images/instagram.svg"

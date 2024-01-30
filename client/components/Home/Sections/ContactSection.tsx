@@ -74,6 +74,8 @@ export function ContactSection() {
             </div>
             <div className="animate-contact-icons shadow-md">
               <a
+                target="_blank"
+                rel="noreferrer"
                 href="https://www.instagram.com/blues_profile/"
                 className="flex w-full rounded-2xl bg-neutral-900 duration-300 hover:brightness-50"
               >
@@ -87,6 +89,8 @@ export function ContactSection() {
             </div>
             <div className="animate-contact-icons shadow-md">
               <a
+                target="_blank"
+                rel="noreferrer"
                 href="https://www.linkedin.com/in/blue-pilkinton-ching/"
                 className="flex w-full rounded-2xl bg-neutral-900 duration-300 hover:brightness-50"
               >

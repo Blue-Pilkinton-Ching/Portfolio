@@ -125,8 +125,8 @@ export function AboutSection() {
             <br />
             <div className="text-md text-justify font-display font-semibold text-white sm:text-xl">
               <p className="about-animate">
-                Kia ora! I&apos;m Blue. Since the age of ten or eleven, I have
-                been programming. I started with scratch, the visual block-based
+                Kia ora! I&apos;m Blue. Since the age of ten, I have been
+                programming. I started with Scratch, the visual block-based
                 programming language, and since then have gone to develop games
                 and web apps, both independently and in groups of teams.
               </p>

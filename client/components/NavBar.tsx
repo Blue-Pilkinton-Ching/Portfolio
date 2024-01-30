@@ -23,7 +23,7 @@ export function NavBar(props: NavBarProps) {
       <a
         onClick={onItemClick}
         href="./cv.pdf"
-        download="CV - Blue Pilkinton-Ching"
+        download="CV - Blue Pilkinton-Ching.pdf"
         className={props.lastItemClasses}
       >
         RESUME

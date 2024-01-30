@@ -27,17 +27,17 @@ export default function ProjectPage() {
           content={
             <>
               PrePay GPT is a site I recently created for interfacing with Open
-              AI GPT Models. The advantage it has over the over the official
-              ChatGPT, is that you can access and pay for GPT-4 on a per-message
-              basis, rather than having to subscribe to the more expensive
-              premium service offered by Open AI. <br />
+              AI GPT Models. The advantage it has over the official ChatGPT, is
+              that you can access and pay for GPT-4 on a per-message basis,
+              rather than having to subscribe to the more expensive premium
+              service offered by Open AI. <br />
               <br />
               This project makes use of many services provided by Google
               Firebase. Some of the technologies & skills I&apos;ve used in this
               project include:
               <br />
               <br />
-              <div className="flex w-full justify-around text-left *:*:max-w-60 *:list-inside *:list-disc">
+              <div className="flex w-full justify-around text-left *:*:max-w-96 *:list-inside *:list-disc">
                 <ul>
                   <li>Authentication</li>
                   <li>Nosql database (firestore)</li>
@@ -155,11 +155,11 @@ export default function ProjectPage() {
               of digital 3d modeling, rendering, texturing, and 2d & 3d
               animation. <br />
               <br />
-              These digital skills arn&apos;t the main ones I focus on. I am
-              more interested and knowlegable in programming, however this
-              course has done a good job at teaching me how to work with and
-              manipulate 3d objects, as well as giving me a deeper level of
-              understanding of design and the full game development workflow.{" "}
+              These digital skills are not the main ones I focus on. I am more
+              interested and knowlegable in programming, however this course has
+              done a good job at teaching me how to work with and manipulate 3d
+              objects, as well as giving me a deeper level of understanding of
+              design and the full game development workflow.
               <br />
               <br />
               Many of the models & renders I&apos;ve made (inlcuding other
