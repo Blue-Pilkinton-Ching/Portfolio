@@ -63,7 +63,7 @@ export default function ProjectPage() {
           demoOptions={[
             {
               type: "demo",
-              link: "https://prepaygpt.xyz",
+              link: "http://prepaygpt.xyz",
               icon: "compass",
             },
             {
