@@ -45,7 +45,6 @@ export default function ProjectPage() {
                 </ul>
               </div>
               <br />
-              PrePay GPT is hosted on an Oracle Cloud VPS.
             </>
           }
           icons={
@@ -56,14 +55,13 @@ export default function ProjectPage() {
               <TechIcon iconName="css" />
               <TechIcon iconName="firebase" />
               <TechIcon iconName="nodejs" />
-              <TechIcon iconName="ubuntu" />
             </>
           }
           playVideo={setVideo}
           demoOptions={[
             {
               type: "demo",
-              link: "http://prepaygpt.xyz",
+              link: "https://www.prepaygpt.xyz",
               icon: "compass",
             },
             {
