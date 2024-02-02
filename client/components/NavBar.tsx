@@ -22,7 +22,7 @@ export function NavBar(props: NavBarProps) {
       </Link>
       <a
         onClick={onItemClick}
-        href="https://drive.google.com/file/d/1AHePSyyLN01eJtzaTdFhzOUR9aPQRW_W/view?usp=sharing"
+        href="https://drive.google.com/file/d/1atpRhUpGNEzdevRvLEOSkxuinj3tt11l/view?usp=sharing"
         target="_blank"
         rel="noreferrer"
       >
