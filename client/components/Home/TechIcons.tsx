@@ -6,6 +6,7 @@ export function TechIcons(props: TechIconsProps) {
     <div className={`${props.classes}`}>
       <TechIcon iconName="javascript" />
       <TechIcon iconName="typescript" />
+      <TechIcon iconName="nextjs" />
       <TechIcon iconName="react" />
       <TechIcon iconName="html" />
       <TechIcon iconName="css" />
