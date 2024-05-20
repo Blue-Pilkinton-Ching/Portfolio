@@ -86,11 +86,11 @@ export default function ProjectPage() {
               link: "https://main.dsxdz6ba6r834.amplifyapp.com/",
               icon: "compass",
             },
-            {
-              type: "video",
-              link: "https://www.youtube.com/embed/w87836Q_MfY",
-              icon: "play",
-            },
+            // {
+            //   type: "video",
+            //   link: "https://www.youtube.com/embed/w87836Q_MfY",
+            //   icon: "play",
+            // },
           ]}
         />
       );
