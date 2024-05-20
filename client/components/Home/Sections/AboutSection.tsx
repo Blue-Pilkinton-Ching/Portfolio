@@ -123,28 +123,32 @@ export function AboutSection() {
             <br />
             <div className="text-md text-justify font-display font-semibold text-white sm:text-xl">
               <p className="about-animate">
-                Kia ora! I&apos;m Blue. Since the age of ten, I have been
-                programming. I started with Scratch, the visual block-based
-                programming language, and since then have gone to develop games
-                and web apps, both independently and in groups of teams.
+                At a young age, I started programming with Scratch, an online
+                visual block-based programming language. Since then have
+                graduated to developing games with Unity Engine, Web Apps,
+                Mobile apps, both independently and in teams. I love to learn,
+                and get a kick out of building interactive and practical
+                products.
               </p>
               <br />
               <p className="about-animate">
-                I love to learn, and get a kick out of building interactive and
-                practical products. Solving problems is my specialty! I thrive
-                on jumping into a challenge and devising creative solutions for
-                it. I am also very passionate and curious about the
-                possibilities of tech, recently I have been developing a web app
-                for interfacing with GPT models.
-              </p>
-              <br />
-              <p className="about-animate">
-                With my most recent study at Dev Academy, alongside the
-                development of technical skills there has been a very strong
-                emphasis on Human Skills when working in teams. I&apos;m all for
-                it! I have a strong value for kindness, empathy, and
+                In 2023, I completed a fullstack web development bootcamp at Dev
+                Academy Aotearoa. This course has given me a much deeper
+                technical understanding of software development and working with
+                others using agile methodologies. This course had a very strong
+                emphasis on the learning and use of Human Skills as well. I’m
+                all for it! I have a strong value for kindness, empathy, and
                 communication. Any place I work at, or situation I&apos;m in, I
                 strive for inclusivity and diversity.
+              </p>
+              <br />
+              <p className="about-animate">
+                I am a highly motivated and enthusiastic person. I have a strong
+                love for learning, and love to get my gears wiring with a
+                challenge. I am fascinated by technology, and enjoy engaging
+                with new and popular tech, such as AI and Web3. I&apos;m looking
+                to get into the software dev industry, so definitely flick me an
+                email if your hiring!
               </p>
             </div>
           </div>
@@ -156,22 +160,22 @@ export function AboutSection() {
               <br />
               <div className="text-md font-display font-semibold text-white sm:text-xl xl:min-w-[320px]">
                 <ul className="about-skills-text-animate list-inside list-disc text-left">
-                  <li>Authentication</li>
-                  <li>REST API calls</li>
-                  <li>Databases</li>
+                  <li>Cloud Services (AWS, Oracle)</li>
+                  <li>AI Development & SDKs</li>
+                  <li>REST APIs & Databases</li>
+                  <li>Authenticating Users</li>
                 </ul>
-                <br />
-                <ul className="about-skills-text-animate list-inside list-disc text-left">
-                  <li>3d & 2d games</li>
+                <ul className="about-skills-text-animate list-inside list-disc py-2 text-left">
+                  <li>P2P Decentralized Apps</li>
                   <li>Multithreaded Code</li>
                   <li>Compute Shaders</li>
-                  <li>Multiplayer Networking (Unity)</li>
+                  <li>Debugging & Breakpoints</li>
                 </ul>
                 <ul className="about-skills-text-animate list-inside list-disc text-left">
-                  <li>Multiplayer Matchmaking (Unity)</li>
-                  <li>Online voice chat with Vivox</li>
+                  <li>Online VC (Unity Vivox)</li>
+                  <li>Multiplayer Networking (Unity)</li>
                   <li>Unity VFX & Shader Graph</li>
-                  <li>C# Debugging & Breakpoints</li>
+                  <li>Animating, Modelling, Rendering</li>
                 </ul>
               </div>
             </div>

@@ -19,6 +19,83 @@ export default function ProjectPage() {
   }, []);
 
   switch (project) {
+    case "heihei":
+      content = (
+        <Project
+          title="Heihei/NZGDA Games"
+          imageFile="heihei"
+          content={
+            <>
+              This project was my first contract work. It comprises of two
+              NextJS/React websites designed for children to play online
+              computer games developed by local New Zealand studios. Both sites,
+              run on the same code, but have separate branding. The website in
+              the images above is Heihei Games. The New Zealand Game Developers
+              Association (NZGDA) also runs there own version of this website.
+              <br />
+              <br />
+              This project was a bit of a difficult one! The stack of the site
+              quite complex, it uses Firebase as its database and authentication
+              provider, but the games themselves, and website deployment is
+              handled by AWS. Juggling these different services became a bit of
+              a challenge and added to that, halfway through the project I
+              learned that regular static routes wouldn`&apos;t be able to
+              handle the sheer file size of the games being uploaded, so I had
+              to build an entire separate ExpressJS backend as well!
+              <br />
+              <br />
+              Some of the technologies, services & skills I&apos;ve used in this
+              project include:
+              <br />
+              <br />
+              <div className="flex w-full justify-around text-left *:*:max-w-96 *:list-inside *:list-disc">
+                <ul>
+                  <li>Authentication</li>
+                  <li>Cloud Firestore</li>
+                </ul>
+                <ul>
+                  <li>AWS Amplify</li>
+                  <li>AWS EC2</li>
+                  <li>AWS S3</li>
+                </ul>
+                <ul>
+                  <li>ExpressJS w Multer</li>
+                  <li>Handling of BLOBs</li>
+                </ul>
+              </div>
+              <br />
+            </>
+          }
+          icons={
+            <>
+              <TechIcon iconName="nextjs" />
+              <TechIcon iconName="react" />
+              <TechIcon scale="scale-[107%]" iconName="typescript" />
+              <TechIcon iconName="tailwindcss" />
+              <TechIcon scale="scale-[85%]" iconName="css" />
+              <TechIcon scale="scale-[80%]" iconName="html" />
+              <TechIcon iconName="firebase" />
+              <TechIcon iconName="nodejs" />
+              <TechIcon iconName="aws" />
+            </>
+          }
+          playVideo={setVideo}
+          demoOptions={[
+            {
+              type: "demo",
+              link: "https://main.dsxdz6ba6r834.amplifyapp.com/",
+              icon: "compass",
+            },
+            {
+              type: "video",
+              link: "https://www.youtube.com/embed/w87836Q_MfY",
+              icon: "play",
+            },
+          ]}
+        />
+      );
+      break;
+
     case "prepaygpt":
       content = (
         <Project
@@ -49,10 +126,10 @@ export default function ProjectPage() {
           }
           icons={
             <>
-              <TechIcon iconName="typescript" />
+              <TechIcon scale="scale-[107%]" iconName="typescript" />
               <TechIcon iconName="react" />
-              <TechIcon iconName="html" />
-              <TechIcon iconName="css" />
+              <TechIcon scale="scale-[80%]" iconName="html" />
+              <TechIcon scale="scale-[85%]" iconName="css" />
               <TechIcon iconName="firebase" />
               <TechIcon iconName="nodejs" />
             </>
@@ -132,7 +209,7 @@ export default function ProjectPage() {
           playVideo={setVideo}
           icons={
             <>
-              <TechIcon iconName="csharp" iconTitle="c#" />
+              <TechIcon scale="scale-[85%]" iconName="csharp" iconTitle="c#" />
               <TechIcon iconName="unity" />
               <TechIcon iconName="unreal-engine" iconTitle="unreal engine" />
             </>
@@ -173,10 +250,22 @@ export default function ProjectPage() {
           ]}
           icons={
             <>
-              <TechIcon iconName="blender" />
-              <TechIcon sm iconName="maya" iconTitle="autodesk maya" />
-              <TechIcon iconName="substance" iconTitle="substance painter" />
-              <TechIcon sm iconName="adobe" iconTitle="adobe creative suite" />
+              <TechIcon scale="scale-[90%]" iconName="blender" />
+              <TechIcon
+                scale="scale-[85%]"
+                iconName="maya"
+                iconTitle="autodesk maya"
+              />
+              <TechIcon
+                scale="scale-[90%]"
+                iconName="substance"
+                iconTitle="substance painter"
+              />
+              <TechIcon
+                scale="scale-[85%]"
+                iconName="adobe"
+                iconTitle="adobe creative suite"
+              />
             </>
           }
         />

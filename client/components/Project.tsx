@@ -105,7 +105,7 @@ export function Project(props: ProjectProps) {
                       src={`/images/${element.icon}.svg`}
                       alt=""
                     />
-                    Live Demo
+                    Live Preview
                   </a>
                 );
                 break;

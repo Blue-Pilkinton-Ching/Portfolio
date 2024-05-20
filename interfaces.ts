@@ -6,7 +6,7 @@ export interface NavBarProps {
 export interface TechIconProps {
   iconName: string;
   iconTitle?: string;
-  sm?: boolean;
+  scale?: string;
 }
 
 export interface TechIconsProps {

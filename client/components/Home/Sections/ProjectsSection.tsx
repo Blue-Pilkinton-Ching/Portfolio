@@ -46,9 +46,17 @@ export function ProjectsSection() {
         >
           <div className="animate-projects">
             <HomeProject
+              title="Heihei Games"
+              file="heihei"
+              technologies="react  •  typescript  • tailwindcss  •  express  •  firebase  •  aws"
+              page="heihei"
+            />
+          </div>
+          <div className="animate-projects">
+            <HomeProject
               title="PrePay GPT"
               file="PrePayGPT"
-              technologies="react  •  firebase  •  typescript  •  nodejs"
+              technologies="react  •  firebase  •  typescript"
               page="prepaygpt"
             />
           </div>
